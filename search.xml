@@ -19,6 +19,15 @@
 ]]></content>
   </entry>
   <entry>
+    <title>codeedit</title>
+    <url>/2022/03/18/codeedit/</url>
+    <content><![CDATA[<h3 id="使用QT编写的代码编辑器"><a href="#使用QT编写的代码编辑器" class="headerlink" title="使用QT编写的代码编辑器"></a>使用QT编写的代码编辑器</h3><p>界面展示</p>
+<p><img src="/2022/03/18/codeedit/main.png"></p>
+<p>核心编辑框使用外部库QScilllina</p>
+<p>采用MVC模式架构，数据与代码分离</p>
+]]></content>
+  </entry>
+  <entry>
     <title>pinn</title>
     <url>/2022/03/18/pinn/</url>
     <content><![CDATA[<h1 id="pinn相关研究与研究进展"><a href="#pinn相关研究与研究进展" class="headerlink" title="pinn相关研究与研究进展"></a>pinn相关研究与研究进展</h1><h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2>]]></content>
