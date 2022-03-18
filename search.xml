@@ -23,7 +23,13 @@
   <entry>
     <title>pinn</title>
     <url>/2022/03/18/pinn/</url>
-    <content><![CDATA[<h1 id="pinn相关研究与研究进展"><a href="#pinn相关研究与研究进展" class="headerlink" title="pinn相关研究与研究进展"></a>pinn相关研究与研究进展</h1><h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2>]]></content>
+    <content><![CDATA[<h1 id="pinn相关研究与研究进展"><a href="#pinn相关研究与研究进展" class="headerlink" title="pinn相关研究与研究进展"></a>pinn相关研究与研究进展</h1><h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2><p>第一部分</p>
+<div class="pdf-container" data-target="Physics1.pdf" data-height="500px"></div>
+
+<p>第二部分</p>
+<div class="pdf-container" data-target="Physics2.pdf" data-height="500px"></div>
+
+]]></content>
       <tags>
         <tag>pinn</tag>
       </tags>
