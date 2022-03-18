@@ -25,6 +25,8 @@
 <p><img src="/2022/03/18/codeedit/main.png"></p>
 <p>核心编辑框使用外部库QScilllina</p>
 <p>采用MVC模式架构，数据与代码分离</p>
+<p>TreeMenu实现不同Item映射不同菜单</p>
+<p><img src="/2022/03/18/codeedit/menu.gif"></p>
 ]]></content>
   </entry>
   <entry>
