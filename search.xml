@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/03/18/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>mainpage</title>
+    <url>/2022/03/18/mainpage/</url>
+    <content><![CDATA[<h3 id="1-数学公式"><a href="#1-数学公式" class="headerlink" title="1.数学公式"></a>1.数学公式</h3><span id="more"></span>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>公式</th>
+<th></th>
+<th>符号</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\int</td>
+<td>$\int$</td>
+<td></td>
+<td>a_1</td>
+<td>$a_1$</td>
+</tr>
+<tr>
+<td>\iint</td>
+<td>$\iint$</td>
+<td></td>
+<td>a^2</td>
+<td>$a^2$</td>
+</tr>
+<tr>
+<td>\iiint</td>
+<td>$\iiint$</td>
+<td></td>
+<td>\bar{x}</td>
+<td>$\bar{x}$</td>
+</tr>
+<tr>
+<td>\lim</td>
+<td>$\lim_{n =1}$</td>
+<td></td>
+<td>\vec{x}</td>
+<td>$\vec{x}$</td>
+</tr>
+<tr>
+<td>\lim\limits_{n = 1}</td>
+<td>$\lim\limits_{n=1}$</td>
+<td></td>
+<td>\dots</td>
+<td>$x_1,x_2,\dots,x_n$</td>
+</tr>
+<tr>
+<td>\sum</td>
+<td>$\sum$</td>
+<td></td>
+<td>\cdots</td>
+<td>$x_1,x_2,\cdots,x_n$</td>
+</tr>
+<tr>
+<td>\prod</td>
+<td>$\prod$</td>
+<td></td>
+<td>\ddots</td>
+<td>$x_1,x_2,\ddots,x_n$</td>
+</tr>
+<tr>
+<td>\sum\limits_{n = 1}^{\infty}</td>
+<td>$\sum\limits_{n = 1}^{\infty}$</td>
+<td></td>
+<td>\vdots</td>
+<td>$x_1,x_2,\vdots,x_n$</td>
+</tr>
+<tr>
+<td>\dfrac{f(x)}{g(x)}</td>
+<td>$\dfrac{f(x)}{g(x)}$</td>
+<td></td>
+<td>矩阵</td>
+<td>$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
+</tr>
+<tr>
+<td>\tfrac{f(x)}{g(x)}(默认)</td>
+<td>$\tfrac{f(x)}{g(x)}$</td>
+<td></td>
+<td>矩阵</td>
+<td>$\begin{pmatrix} a &amp; b\ c &amp; d \ \end{pmatrix} \quad  \quad \begin{Bmatrix} a &amp; b \ c &amp; d\ \end{Bmatrix}\quad \begin{vmatrix} a &amp; b \ c &amp; d \ \end{vmatrix}\quad \begin{Vmatrix} a &amp; b\ c &amp; d \ \end{Vmatrix}$</td>
+</tr>
+<tr>
+<td>\boxed{a}</td>
+<td>$\boxed{a}$</td>
+<td></td>
+<td>\quad</td>
+<td>$a\quad b$</td>
+</tr>
+<tr>
+<td>\sqrt[n]{x}</td>
+<td>$\sqrt[n]{x}$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>split对齐</th>
+<th align="right">$\begin{split}f(x)=&amp;ax^2+bx+c\&amp;dy^2+fy+e\end{split}$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>case</td>
+<td align="right">$\begin{cases}f(x)=ax^2+bx+c\g(x)=dy^2+fy+e\end{cases}$</td>
+</tr>
+<tr>
+<td>align对齐</td>
+<td align="right">$\begin{align}f(x)=&amp;ax^2+bx+c\g(x)=&amp;dy^2+fy+e\end{align}$</td>
+</tr>
+<tr>
+<td>array</td>
+<td align="right">$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
+</tr>
+</tbody></table>
+<p><img src="/2022/03/18/mainpage/QQ%E6%88%AA%E5%9B%BE20200304195537.png"></p>
+]]></content>
+      <tags>
+        <tag>main</tag>
+      </tags>
+  </entry>
+</search>
