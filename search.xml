@@ -29,12 +29,15 @@
     <content><![CDATA[<p>pinn相关研究与研究进展,相关论文总结与文献综述</p>
 <span id="more"></span>
 
-<h1 id="pinn相关研究与研究进展"><a href="#pinn相关研究与研究进展" class="headerlink" title="pinn相关研究与研究进展"></a>pinn相关研究与研究进展</h1><h2 id="历史背景"><a href="#历史背景" class="headerlink" title="历史背景"></a>历史背景</h2><p>第一部分</p>
-<div class="pdf-container" data-target="Physics1.pdf" data-height="500px"></div>
-
-<p>第二部分</p>
-<div class="pdf-container" data-target="Physics2.pdf" data-height="500px"></div>
-
+<h1 id="pinn相关研究与研究进展"><a href="#pinn相关研究与研究进展" class="headerlink" title="pinn相关研究与研究进展"></a>pinn相关研究与研究进展</h1><h2 id="PINN研究起源"><a href="#PINN研究起源" class="headerlink" title="PINN研究起源"></a>PINN研究起源</h2><ul>
+<li>Physics-informed neural networks: A deep learning framework for solving forward and inverse<br>  problems involving nonlinear partial differential equations<br>  用内嵌物理信息的神经网络求解PDE的源头文章，从数据驱动角度提出PINN，求解PDE正逆问题</li>
+<li><a href="https://blog.csdn.net/weixin_45521594/article/details/108571946">DGM</a>: A deep learning algorithm for solving partial differential equations<br>  对于高维PDE用数值方法不能求解，提出DGM方法即用神经网络求解高维PDE问题，同时提出用Monte Carlo估计方法代替PDE中的二阶导数能够加速学习</li>
+<li>hp-VPINNs: Variational Physics-Informed Neural Networks With Domain Decomposition<br>  采用变分区域的方式对区域内采点，这是一种启发式的踩点方法，在准确性上有所提升.</li>
+<li><a href="https://blog.csdn.net/weixin_45521594/article/details/106236018">Physics-informed neural networks for inverse problems in nano-optics and metamaterials</a><br>  用PINN求解材料PDE问题中的参数，求解逆问题，使用的最常规的PINN，主要是结合了材料相关背景.</li>
+<li>Physics-Informed Neural Networks for Cardiac Activation Mapping</li>
+<li><a href="https://blog.csdn.net/weixin_45521594/article/details/106336094">DeepXDE</a>: A deep learning library for solving differential equations<br>  提出了基于PINN的一个求解各类PDE的库.</li>
+<li>Deep learning-based method coupled with small sample learning for solving partial differential equation<br>  特意将损失项中的data loss提出来说这是小样本学习，相比于Rassi的PINN增加data loss项，并与其对比，复现了文章中的算例，增加了一项loss后在准确度上有所提高</li>
+</ul>
 ]]></content>
       <tags>
         <tag>pinn</tag>
