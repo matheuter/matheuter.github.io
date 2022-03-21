@@ -11,7 +11,7 @@
   --table-row-odd-bg-color: #f9f9f9;
   --table-row-hover-bg-color: #f5f5f5;
   --menu-item-bg-color: #f5f5f5;
-  --theme-color: #222;
+  --theme-color: #fffff1;
   --btn-default-bg: #fff;
   --btn-default-color: #555;
   --btn-default-border-color: #555;
@@ -190,6 +190,13 @@ body {
   min-height: 100%;
   position: relative;
   transition: padding 0.2s ease-in-out;
+  overflow-x: hidden;
+  width: 100vw;
+}
+@supports (overflow-x: clip) {
+  body {
+    overflow-x: clip;
+  }
 }
 h1,
 h2,
@@ -383,29 +390,11 @@ pre:hover .copy-btn {
   padding: 2px 6px;
   position: absolute;
   transition: opacity 0.2s ease-in-out;
-  color: var(--highlight-foreground);
-  font-size: 14px;
+  background: #fff;
+  border: 0;
+  font-size: 0.8125em;
   right: 0;
-  top: 2px;
-}
-figure.highlight {
-  border-radius: 5px;
-  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
-  padding-top: 30px;
-}
-figure.highlight .table-container {
-  border-radius: 0 0 5px 5px;
-}
-figure.highlight::before {
-  background: #fc625d;
-  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
-  left: 12px;
-  margin-top: -20px;
-  position: absolute;
-  border-radius: 50%;
-  content: ' ';
-  height: 12px;
-  width: 12px;
+  top: 0;
 }
 code,
 kbd,
@@ -1263,6 +1252,35 @@ pre code {
 .use-motion .menu-item {
   visibility: hidden;
 }
+.book-mark-link {
+  border-bottom: 0;
+  position: fixed;
+  top: -10px;
+  transition: top 0.3s;
+  right: 30px;
+}
+@media (max-width: 991px) {
+  .book-mark-link {
+    right: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .book-mark-link {
+    display: none;
+  }
+}
+.book-mark-link::before {
+  color: #222;
+  font-size: 32px;
+  line-height: 1;
+  content: '\f02e';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+.book-mark-link:hover,
+.book-mark-link-fixed {
+  top: -2px;
+}
 .sidebar-inner {
   color: #999;
   max-height: calc(100vh - 10px);
@@ -1647,6 +1665,64 @@ pre code {
     transform: scale(1.1);
   }
 }
+@media (max-width: 567px) {
+  .main-inner {
+    padding: initial !important;
+  }
+  .posts-expand .post-header {
+    margin-bottom: 10px !important;
+  }
+  .post-block {
+    margin-top: initial !important;
+    padding: 8px 18px 8px !important;
+  }
+  .post-body h1,
+  .post-body h2,
+  .post-body h3,
+  .post-body h4,
+  .post-body h5,
+  .post-body h6 {
+    margin: 20px 0 8px;
+  }
+  .post-body .note h1,
+  .post-body .tabs .tab-content .tab-pane h1,
+  .post-body .note h2,
+  .post-body .tabs .tab-content .tab-pane h2,
+  .post-body .note h3,
+  .post-body .tabs .tab-content .tab-pane h3,
+  .post-body .note h4,
+  .post-body .tabs .tab-content .tab-pane h4,
+  .post-body .note h5,
+  .post-body .tabs .tab-content .tab-pane h5,
+  .post-body .note h6,
+  .post-body .tabs .tab-content .tab-pane h6 {
+    margin: 0 5px;
+  }
+  .post-body > p {
+    margin: 0 0 10px;
+  }
+  .post-body .note > p,
+  .post-body .tabs .tab-content .tab-pane > p {
+    padding: 0 5px;
+  }
+  .post-body img,
+  .post-body video {
+    margin-bottom: 10px !important;
+  }
+  .post-body .note {
+    margin-bottom: 10px !important;
+    padding: 10px !important;
+  }
+  .post-body .tabs .tab-content .tab-pane {
+    padding: 10px 10px 0 !important;
+  }
+  .post-eof {
+    margin: 40px auto 20px !important;
+  }
+  .pagination {
+    margin-top: 40px;
+  }
+}
 .noscript-warning {
   background-color: #f55;
   color: #fff;
@@ -1675,6 +1751,16 @@ pre code {
 }
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
+}
+.reading-progress-bar {
+  --progress: 0;
+  background: #37c6c0;
+  height: 3px;
+  position: fixed;
+  z-index: 50;
+  width: var(--progress);
+  left: 0;
+  top: 0;
 }
 .rtl.post-body p,
 .rtl.post-body a,
@@ -2830,7 +2916,6 @@ mjx-container[display='true'] + br {
 }
 .post-body h1 {
   background: #2b6695;
-  border-radius: 6px 6px 6px 6px;
   box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10,10,0,0.5);
   color: #fff;
   font-family: "微软雅黑", "宋体", "黑体", Arial;
@@ -2842,24 +2927,35 @@ mjx-container[display='true'] + br {
   padding: 8px 0 5px 5px;
   text-shadow: 2px 2px 3px #222;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-left: 5px solid #2b6695;
+  border-right: 5px solid #2b6695;
 }
 .post-body h3,
 .post-body h2 {
-  background: #2b6695;
-  border-radius: 6px 6px 6px 6px;
-  box-shadow: 0 0 0 1px #5f5a4b, 1px 1px 6px 1px rgba(10,10,0,0.5);
+  background: #5f9ea0;
   color: #fff;
   font-family: "微软雅黑", "宋体", "黑体", Arial;
   font-size: 18px;
   font-weight: bold;
-  height: 20px;
+  height: 25px;
   line-height: 25px;
   margin: 18px 0 !important;
   padding: 8px 0 5px 5px;
-  text-shadow: 2px 2px 3px #222;
-  text-align: center;
-  border-bottom: 1px dotted #eee;
+  border-left: 5px solid #2b6695;
+  border-right: 5px solid #2b6695;
+}
+.post-body blockquote {
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  border-top: 5px solid #2b6695;
+  background-color: #f1f1f1;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-inner {
