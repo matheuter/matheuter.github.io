@@ -20,7 +20,7 @@
 <p>核心编辑框使用外部库QScilllina</p>
 <p>采用MVC模式架构，数据与代码分离</p>
 <p>TreeMenu实现不同Item映射不同菜单</p>
-<p><img src="/2022/03/18/codeedit/menu.gif"></p>
+<p><img src="/2022/03/18/codeedit/code.png"></p>
 ]]></content>
   </entry>
   <entry>
@@ -37,6 +37,17 @@
 
 <h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">net = Net(<span class="number">10</span>, <span class="number">24</span>)</span><br><span class="line"></span><br><span class="line">loss_data = []</span><br><span class="line"></span><br><span class="line">opt = torch.optim.Adam(params=net.parameters(), lr=<span class="number">1e-7</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10000</span>):</span><br><span class="line">    opt.zero_grad()</span><br><span class="line">    l = loss_interior(net) + loss_boundary1(net) + loss_initial_value(net) + loss_boundary2(net)</span><br><span class="line">    l.backward()</span><br><span class="line">    opt.step()</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        <span class="built_in">print</span>(l.item())</span><br><span class="line">    loss_data.append([i, l.item()])</span><br><span class="line"></span><br><span class="line">torch.save(net, <span class="string">&#x27;./data/net.pkl&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<p>$$<br>\displaystyle<br>        \left{\begin{array}{c}</p>
+<pre><code>        \frac&#123;\partial C&#125;&#123;\partial t&#125;=D \frac&#123;\partial^&#123;2&#125; C&#125;&#123;\partial x^&#123;2&#125;&#125; ;(0&lt;x&lt;1, t&gt;0) 
+        \\
+        \frac&#123;\partial C&#125;&#123;\partial x&#125;(0, t)=\pi e^&#123;-\pi^&#123;2&#125; t&#125; \cos (\pi x) 
+        \\ 
+        C(l, t)=0 ;(0 \leq x \leq 1) 
+        \\
+        C(x, 0)=\sin (\pi x) ;(t \geq 0)
+    \end&#123;array&#125;\right.
+</code></pre>
+<p>$$</p>
 ]]></content>
       <tags>
         <tag>pinn</tag>
