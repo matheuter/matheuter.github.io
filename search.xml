@@ -10,6 +10,85 @@
 ]]></content>
   </entry>
   <entry>
+    <title>build_vnc</title>
+    <url>/2022/03/25/build-vnc/</url>
+    <content><![CDATA[<h1 id="虚拟网络计算VNC的安装与配置"><a href="#虚拟网络计算VNC的安装与配置" class="headerlink" title="虚拟网络计算VNC的安装与配置"></a>虚拟网络计算VNC的安装与配置</h1><h2 id="1-切换用户为Root"><a href="#1-切换用户为Root" class="headerlink" title="1 切换用户为Root"></a>1 切换用户为Root</h2><p>执行如下命令将当前用户切换至Root用户</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo su root</span><br></pre></td></tr></table></figure>
+
+<p>执行完毕以后，原来的ubuntu用户会切换成root，如下图所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/igj3qn1h6v.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="2-更新获取软件及版本信息"><a href="#2-更新获取软件及版本信息" class="headerlink" title="2 更新获取软件及版本信息"></a>2 更新获取软件及版本信息</h2><p>执行如下命令来更新获取最新的软件及版本信息</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>执行完毕以后，如下所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/evnno0b6zq.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="3-安装VNC4Server"><a href="#3-安装VNC4Server" class="headerlink" title="3 安装VNC4Server"></a>3 安装VNC4Server</h2><p>通过执行如下命令来安装VNC</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get install vnc4server</span><br></pre></td></tr></table></figure>
+
+<p>执行完毕，如下图所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/in2iv6eus9.png?imageView2/2/w/1620" alt="img"></p>
+<p>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p>安装完毕以后，如下图所示：</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/kgliyfif39.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="4-启动VNC"><a href="#4-启动VNC" class="headerlink" title="4 启动VNC"></a>4 启动VNC</h2><p>我们那执行如下命令启动VNC服务</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver</span><br></pre></td></tr></table></figure>
+
+<p>启动完毕如下所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/yhmre3rbck.png?imageView2/2/w/1620" alt="img"></p>
+<p>设置VNC的密码</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/1kdp4jbljv.png?imageView2/2/w/1620" alt="img"></p>
+<p>当我们看到New ‘VM-32-4-ubuntu:1 (root)’ desktop is VM-32-4-ubuntu:1字样的时候，说明启动成功。</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/hl4n7vbd9q.png?imageView2/2/w/1620" alt="img"></p>
+<hr>
+<h1 id="Gnome-桌面环境安装与配置"><a href="#Gnome-桌面环境安装与配置" class="headerlink" title="Gnome 桌面环境安装与配置"></a>Gnome 桌面环境安装与配置</h1><h2 id="1-Gnome-桌面简介"><a href="#1-Gnome-桌面简介" class="headerlink" title="1 Gnome 桌面简介"></a>1 Gnome 桌面简介</h2><blockquote>
+<p> GNOME是一套<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E7%BA%AF%E7%B2%B9/2478">纯粹</a>自由的计算机软件，运行在<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上，提供图形<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/3373875">桌面环境</a>。 GNOME 包含了 Panel （用来启动此程式和显示目前的状态）、桌面 （应用程式和资料放置的地方）及一系列的标准桌面工具和应用程式，并且能让各个应用程式都能正常地运作。 GNOME是Linux<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上最常用的图形桌面环境之一。 </p>
+</blockquote>
+<h2 id="4-2-安装X-windows的基础"><a href="#4-2-安装X-windows的基础" class="headerlink" title="4.2 安装X-windows的基础"></a>4.2 安装X-windows的基础</h2><p><strong>①</strong>执行如下命令来去安装X-windows的基础</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x-<span class="variable language_">window</span>-system-core</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p><strong>③</strong>安装完毕以后，如下所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p82zu96rc3.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="3安装登录管理器"><a href="#3安装登录管理器" class="headerlink" title="3安装登录管理器"></a>3安装登录管理器</h2><p><strong>①</strong>执行如下命令安装登陆管理器</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gdm3</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p><strong>③</strong>安装完毕，如下图所示 </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/wdd2st2uxr.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="4-安装Ubuntu的桌面"><a href="#4-安装Ubuntu的桌面" class="headerlink" title="4 安装Ubuntu的桌面"></a>4 安装Ubuntu的桌面</h2><p>①执行如下命令安装 ubuntu-desktop 应用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ubuntu-desktop</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<h2 id="4-5-安装Gnome相关配套软件"><a href="#4-5-安装Gnome相关配套软件" class="headerlink" title="4.5 安装Gnome相关配套软件"></a>4.5 安装Gnome相关配套软件</h2><p>执行如下命令安装Gnome相关配套软件 <strong>①</strong>执行命令如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p><strong>③</strong>如下图所示，已经成功安装完毕</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/dg8a3zm0x8.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="6-修改VNC配置文件"><a href="#6-修改VNC配置文件" class="headerlink" title="6 修改VNC配置文件"></a>6 修改VNC配置文件</h2><p><strong>①</strong>修改/.vnc/xstartup中的文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vi ~<span class="regexp">/.vnc/</span>xstartup</span><br></pre></td></tr></table></figure>
+
+<p>将配置文件修改为</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#!<span class="regexp">/bin/</span>sh</span><br><span class="line"># <span class="title class_">Uncomment</span> the following two lines <span class="keyword">for</span> normal <span class="attr">desktop</span>:</span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">XKL_XMODMAP_DISABLE</span>=<span class="number">1</span></span><br><span class="line"> unset <span class="variable constant_">SESSION_MANAGER</span></span><br><span class="line"># exec /etc/<span class="variable constant_">X11</span>/xinit/xinitrc</span><br><span class="line">unset <span class="variable constant_">DBUS_SESSION_BUS_ADDRESS</span></span><br><span class="line">gnome-panel &amp;</span><br><span class="line">gnome-settings-daemon &amp;</span><br><span class="line">metacity &amp;</span><br><span class="line">nautilus &amp;</span><br><span class="line">gnome-terminal &amp;</span><br></pre></td></tr></table></figure>
+
+<p>修改完毕，如下图所示 </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/jt1i97qjds.png?imageView2/2/w/1620" alt="img"></p>
+<p><strong>②</strong>修改完毕以后，按:wq键进行保存</p>
+<h2 id="7-重启桌面进程"><a href="#7-重启桌面进程" class="headerlink" title="7 重启桌面进程"></a>7 重启桌面进程</h2><p><strong>①</strong>杀掉原桌面进程，输入命令（其中的:1是桌面号）：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver -kill :<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>输入以下命令生成新的会话：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver :<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>执行成功以后，如下图所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/6dszkqfswp.png?imageView2/2/w/1620" alt="img"></p>
+<h1 id="本地使用VNC连接"><a href="#本地使用VNC连接" class="headerlink" title="本地使用VNC连接"></a>本地使用VNC连接</h1><h2 id="1-下载VNC-Viewer"><a href="#1-下载VNC-Viewer" class="headerlink" title="1 下载VNC Viewer"></a>1 下载VNC Viewer</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p929x5fkvw.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="2连接VNC"><a href="#2连接VNC" class="headerlink" title="2连接VNC"></a>2连接VNC</h2><p>① 在VNC Viewer 软件中，输入对应的公网IP地址:1 的方式进行连接</p>
+<p>②点击”Continue”选项</p>
+<p>③再此输入之前设置的VNC的密码，并点击“OK”进行下一步</p>
+]]></content>
+  </entry>
+  <entry>
     <title>使用QT编写的代码编辑器</title>
     <url>/2022/03/18/codeedit/</url>
     <content><![CDATA[<p>使用QT编写的代码编辑器,采用MVC模式架构，数据与代码分离</p>
