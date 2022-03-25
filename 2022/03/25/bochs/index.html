@@ -1,18 +1,268 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/03/18/hello-world/</url>
-    <content><![CDATA[<p>this is my frist program  </p>
-<h2 id="Welcome-！"><a href="#Welcome-！" class="headerlink" title="Welcome ！"></a>Welcome ！</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#fffff1"><meta name="generator" content="Hexo 5.4.1">
 
 
-]]></content>
-  </entry>
-  <entry>
-    <title>bochs</title>
-    <url>/2022/03/25/bochs/</url>
-    <content><![CDATA[<h1 id="BOCHS虚拟端口号"><a href="#BOCHS虚拟端口号" class="headerlink" title="BOCHS虚拟端口号"></a>BOCHS虚拟端口号</h1><h2 id="主要端口号"><a href="#主要端口号" class="headerlink" title="主要端口号"></a>主要端口号</h2><p>0000-001f : dma1<br>0020-0021 : pic1<br>0040-0043 : timer0<br>0050-0053 : timer1<br>0060-0060 : keyboard<br>0064-0064 : keyboard<br>0070-0077 : rtc<br>0080-008f : dma page reg<br>00a0-00a1 : pic2<br>00c0-00df : dma2<br>00f0-00ff : fpu<br>0170-0177 : ide1<br>02f8-02ff : serial<br>0376-0376 : ide1<br>0378-037a : parport0<br>03c0-03df : vga+<br>03f2-03f5 : floppy<br>03f7-03f7 : floppy DIR<br>03f8-03ff : serial<br>1000-103f : 0000:00:07.3<br>1000-103f : motherboard<br>1000-1003 : ACPI PM1a_EVT_BLK<br>1004-1005 : ACPI PM1a_CNT_BLK<br>1008-100b : ACPI PM_TMR<br>100c-100f : ACPI GPE0_BLK<br>1010-1015 : ACPI CPU throttle<br>1040-104f : 0000:00:07.3<br>1040-104f : motherboard<br>1060-107f : pnp 00:0d<br>1080-10bf : 0000:00:07.7<br>10c0-10cf : 0000:00:07.1<br>10c0-10c7 : ide0<br>10c8-10cf : ide1<br>10d0-10df : 0000:00:0f.0<br>1400-14ff : 0000:00:10.0<br>2000-3fff : PCI Bus #02<br>2000-207f : 0000:02:00.0<br>2000-201f : pcnet32_probe_pci<br>4000-4fff : PCI Bus #03<br>5000-5fff : PCI Bus #0b<br>6000-6fff : PCI Bus #13<br>7000-7fff : PCI Bus #1b<br>8000-8fff : PCI Bus #04<br>9000-9fff : PCI Bus #0c<br>a000-afff : PCI Bus #14<br>b000-bfff : PCI Bus #1c<br>c000-cfff : PCI Bus #05<br>d000-dfff : PCI Bus #0d<br>e000-efff : PCI Bus #15<br>f000-ffff : PCI Bus #1d</p>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#fffff1">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.likepanda.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":10,"offset":5},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="BOCHS虚拟端口号主要端口号0000-001f : dma10020-0021 : pic10040-0043 : timer00050-0053 : timer10060-0060 : keyboard0064-0064 : keyboard0070-0077 : rtc0080-008f : dma page reg00a0-00a1 : pic200c0-00df : dma200f0-0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bochs">
+<meta property="og:url" content="http://www.likepanda.cn/2022/03/25/bochs/index.html">
+<meta property="og:site_name" content="rivia site">
+<meta property="og:description" content="BOCHS虚拟端口号主要端口号0000-001f : dma10020-0021 : pic10040-0043 : timer00050-0053 : timer10060-0060 : keyboard0064-0064 : keyboard0070-0077 : rtc0080-008f : dma page reg00a0-00a1 : pic200c0-00df : dma200f0-0">
+<meta property="og:locale" content="zh_CH">
+<meta property="article:published_time" content="2022-03-25T13:03:44.000Z">
+<meta property="article:modified_time" content="2022-03-25T13:06:57.312Z">
+<meta property="article:author" content="Jok Brown">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://www.likepanda.cn/2022/03/25/bochs/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CH","comments":true,"permalink":"http://www.likepanda.cn/2022/03/25/bochs/","path":"2022/03/25/bochs/","title":"bochs"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>bochs | rivia site</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">rivia site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">deep thinking</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于rivia</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>博客归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索本站
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#BOCHS%E8%99%9A%E6%8B%9F%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="nav-number">1.</span> <span class="nav-text">BOCHS虚拟端口号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BB%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="nav-number">1.1.</span> <span class="nav-text">主要端口号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-Function-and-Chip-Server-if-present"><span class="nav-number">1.2.</span> <span class="nav-text">  Port    Function and Chip Server (if present)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-00-0FH-and-81H-83H-The-8237A-DMA-Controller-Chip-and-PS-2-Extensions"><span class="nav-number">1.3.</span> <span class="nav-text">Ports 00-0FH and 81H-83H: The 8237A DMA Controller Chip and PS&#x2F;2 Extensions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-20H-21H-Master-8259A-Interrupt-Controller"><span class="nav-number">1.4.</span> <span class="nav-text">Ports 20H-21H: Master 8259A Interrupt Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-40H-43H-The-8253-Timer-Chip"><span class="nav-number">1.5.</span> <span class="nav-text">Ports 40H-43H: The 8253 Timer Chip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-44H-47H-PS-2-Watchdog-Timer-Counter-and-Control-Port"><span class="nav-number">1.6.</span> <span class="nav-text">Ports 44H,47H: PS&#x2F;2 Watchdog Timer Counter and Control Port</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-60H-63H-PC-8255-Parallel-I-O-Port-Chip-for-Keyboard-and-Status"><span class="nav-number">1.7.</span> <span class="nav-text">Ports 60H-63H: PC 8255 Parallel I&#x2F;O Port Chip for Keyboard and Status</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-60H-64H-PS-2-Intel-8042-Keyboard-Auxiliary-Device-Controller"><span class="nav-number">1.8.</span> <span class="nav-text">Ports 60H-64H: PS&#x2F;2 Intel 8042 Keyboard&#x2F;Auxiliary Device Controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-61H-PS-2-System-Control-Port-B"><span class="nav-number">1.9.</span> <span class="nav-text">Port 61H: PS&#x2F;2 System Control Port B</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-70H-and-71H-Configuration-Ports-and-Real-Time-Clock-Chip-MC146818"><span class="nav-number">1.10.</span> <span class="nav-text">Ports 70H and 71H: Configuration Ports and Real-Time-Clock Chip MC146818</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-90H-PS-2-Central-Arbitration-Register"><span class="nav-number">1.11.</span> <span class="nav-text">Port: 90H: PS&#x2F;2 Central Arbitration Register</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-92H-PS-2-System-Control-Port-A"><span class="nav-number">1.12.</span> <span class="nav-text">Port: 92H: PS&#x2F;2 System Control Port A</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-94H-to-96H-System-Setup"><span class="nav-number">1.13.</span> <span class="nav-text">Ports 94H to 96H:  System Setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-100H-107H-PS-2-Program-Option-Select-POS"><span class="nav-number">1.14.</span> <span class="nav-text">Ports 100H-107H: PS&#x2F;2 Program Option Select (POS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-0A0H-The-PC-NMI-Mask-Register"><span class="nav-number">1.15.</span> <span class="nav-text">Port 0A0H: The PC NMI Mask Register</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-0F0H-0FFH-80x87-Math-Coprocessor"><span class="nav-number">1.16.</span> <span class="nav-text">Ports 0F0H-0FFH: 80x87 Math Coprocessor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-201H-The-Game-Port-PC-XT-AT"><span class="nav-number">1.17.</span> <span class="nav-text">Port 201H: The Game Port (PC, XT, AT)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-278H-27AH-378H-37AH-3BCH-3BEH-LPT3-2-1-Printer-Ports"><span class="nav-number">1.18.</span> <span class="nav-text">Ports 278H-27AH, 378H-37AH, 3BCH-3BEH LPT3,2,1 Printer Ports</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-2E8-2EEH-2F8-2FEH-3E8-3EEH-3F8-3FEH-COM4-3-2-1"><span class="nav-number">1.19.</span> <span class="nav-text">Ports 2E8-2EEH, 2F8-2FEH, 3E8-3EEH, 3F8-3FEH COM4,3,2,1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-3C0H-3CFH-VGA-Support"><span class="nav-number">1.20.</span> <span class="nav-text">Ports: 3C0H-3CFH: VGA Support</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-3F0H-3F7H-Diskette-Controller-Ports"><span class="nav-number">1.21.</span> <span class="nav-text">Ports 3F0H-3F7H: Diskette Controller Ports</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-3F0H-3F1H-PS-2-Diskette-Status-Registers"><span class="nav-number">1.22.</span> <span class="nav-text">Ports 3F0H, 3F1H: PS&#x2F;2 Diskette Status Registers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-3F2H-3F4H-3F5H-PS-2-8272-Diskette-Controller"><span class="nav-number">1.23.</span> <span class="nav-text">Ports 3F2H, 3F4H, 3F5H: PS&#x2F;2 8272 Diskette Controller:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-3F7H-is-dual-purpose-on-the-PS-2"><span class="nav-number">1.24.</span> <span class="nav-text">Port 3F7H is dual purpose on the PS&#x2F;2:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ports-3220-3227-3228-322E-4220-4227-4228-422E-5220-5227-5228-522E"><span class="nav-number">1.25.</span> <span class="nav-text">Ports 3220-3227, 3228-322E, 4220-4227, 4228-422E, 5220-5227, 5228-522E:</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jok Brown</p>
+  <div class="site-description" itemprop="description">python c++ qt</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CH">
+    <link itemprop="mainEntityOfPage" href="http://www.likepanda.cn/2022/03/25/bochs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jok Brown">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rivia site">
+      <meta itemprop="description" content="python c++ qt">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="bochs | rivia site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          bochs
+        </h1>
+
+        <div class="post-meta-container">
+          
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-03-25 21:03:44 / 修改时间：21:06:57" itemprop="dateCreated datePublished" datetime="2022-03-25T21:03:44+08:00">2022-03-25</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="BOCHS虚拟端口号"><a href="#BOCHS虚拟端口号" class="headerlink" title="BOCHS虚拟端口号"></a>BOCHS虚拟端口号</h1><h2 id="主要端口号"><a href="#主要端口号" class="headerlink" title="主要端口号"></a>主要端口号</h2><p>0000-001f : dma1<br>0020-0021 : pic1<br>0040-0043 : timer0<br>0050-0053 : timer1<br>0060-0060 : keyboard<br>0064-0064 : keyboard<br>0070-0077 : rtc<br>0080-008f : dma page reg<br>00a0-00a1 : pic2<br>00c0-00df : dma2<br>00f0-00ff : fpu<br>0170-0177 : ide1<br>02f8-02ff : serial<br>0376-0376 : ide1<br>0378-037a : parport0<br>03c0-03df : vga+<br>03f2-03f5 : floppy<br>03f7-03f7 : floppy DIR<br>03f8-03ff : serial<br>1000-103f : 0000:00:07.3<br>1000-103f : motherboard<br>1000-1003 : ACPI PM1a_EVT_BLK<br>1004-1005 : ACPI PM1a_CNT_BLK<br>1008-100b : ACPI PM_TMR<br>100c-100f : ACPI GPE0_BLK<br>1010-1015 : ACPI CPU throttle<br>1040-104f : 0000:00:07.3<br>1040-104f : motherboard<br>1060-107f : pnp 00:0d<br>1080-10bf : 0000:00:07.7<br>10c0-10cf : 0000:00:07.1<br>10c0-10c7 : ide0<br>10c8-10cf : ide1<br>10d0-10df : 0000:00:0f.0<br>1400-14ff : 0000:00:10.0<br>2000-3fff : PCI Bus #02<br>2000-207f : 0000:02:00.0<br>2000-201f : pcnet32_probe_pci<br>4000-4fff : PCI Bus #03<br>5000-5fff : PCI Bus #0b<br>6000-6fff : PCI Bus #13<br>7000-7fff : PCI Bus #1b<br>8000-8fff : PCI Bus #04<br>9000-9fff : PCI Bus #0c<br>a000-afff : PCI Bus #14<br>b000-bfff : PCI Bus #1c<br>c000-cfff : PCI Bus #05<br>d000-dfff : PCI Bus #0d<br>e000-efff : PCI Bus #15<br>f000-ffff : PCI Bus #1d</p>
 <pre><code>     I/O Ports and Controllers on IBM Compatibles and PS/2
 </code></pre>
 <hr>
@@ -791,256 +1041,118 @@ Bit 7 Enable System Microprocessor Cycle  ESMC
 <p>Operations are performed by sending a command string to the data port<br>(checking the bit 6 of the status register after each byte).  Interrupt<br>6 is generated by the controller after a seek operation is complete.<br>The interrupt handler simply sets bit 7 at 40:3EH, the seek status byte.<br>Poll this byte until bit 7 is set, then reset the bit and continue with<br>next sector operation, initialization of the DMA chip.</p>
 <hr>
 <h2 id="Ports-3220-3227-3228-322E-4220-4227-4228-422E-5220-5227-5228-522E"><a href="#Ports-3220-3227-3228-322E-4220-4227-4228-422E-5220-5227-5228-522E" class="headerlink" title="Ports 3220-3227, 3228-322E, 4220-4227, 4228-422E, 5220-5227, 5228-522E:"></a>Ports 3220-3227, 3228-322E, 4220-4227, 4228-422E, 5220-5227, 5228-522E:</h2><p>These are the assigned COM3-8 serial ports on the PS/2, all utilizing<br>IRQ3 interrupt line.  For programming information, see ports 2E8-2EE.</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>build_vnc</title>
-    <url>/2022/03/25/build-vnc/</url>
-    <content><![CDATA[<h1 id="虚拟网络计算VNC的安装与配置"><a href="#虚拟网络计算VNC的安装与配置" class="headerlink" title="虚拟网络计算VNC的安装与配置"></a>虚拟网络计算VNC的安装与配置</h1><h2 id="1-切换用户为Root"><a href="#1-切换用户为Root" class="headerlink" title="1 切换用户为Root"></a>1 切换用户为Root</h2><p>执行如下命令将当前用户切换至Root用户</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo su root</span><br></pre></td></tr></table></figure>
 
-<p>执行完毕以后，原来的ubuntu用户会切换成root，如下图所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/igj3qn1h6v.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="2-更新获取软件及版本信息"><a href="#2-更新获取软件及版本信息" class="headerlink" title="2 更新获取软件及版本信息"></a>2 更新获取软件及版本信息</h2><p>执行如下命令来更新获取最新的软件及版本信息</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+    </div>
 
-<p>执行完毕以后，如下所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/evnno0b6zq.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="3-安装VNC4Server"><a href="#3-安装VNC4Server" class="headerlink" title="3 安装VNC4Server"></a>3 安装VNC4Server</h2><p>通过执行如下命令来安装VNC</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get install vnc4server</span><br></pre></td></tr></table></figure>
+    
+    
+    
 
-<p>执行完毕，如下图所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/in2iv6eus9.png?imageView2/2/w/1620" alt="img"></p>
-<p>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p>安装完毕以后，如下图所示：</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/kgliyfif39.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="4-启动VNC"><a href="#4-启动VNC" class="headerlink" title="4 启动VNC"></a>4 启动VNC</h2><p>我们那执行如下命令启动VNC服务</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver</span><br></pre></td></tr></table></figure>
+    <footer class="post-footer">
+          
 
-<p>启动完毕如下所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/yhmre3rbck.png?imageView2/2/w/1620" alt="img"></p>
-<p>设置VNC的密码</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/1kdp4jbljv.png?imageView2/2/w/1620" alt="img"></p>
-<p>当我们看到New ‘VM-32-4-ubuntu:1 (root)’ desktop is VM-32-4-ubuntu:1字样的时候，说明启动成功。</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/hl4n7vbd9q.png?imageView2/2/w/1620" alt="img"></p>
-<hr>
-<h1 id="Gnome-桌面环境安装与配置"><a href="#Gnome-桌面环境安装与配置" class="headerlink" title="Gnome 桌面环境安装与配置"></a>Gnome 桌面环境安装与配置</h1><h2 id="1-Gnome-桌面简介"><a href="#1-Gnome-桌面简介" class="headerlink" title="1 Gnome 桌面简介"></a>1 Gnome 桌面简介</h2><blockquote>
-<p> GNOME是一套<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E7%BA%AF%E7%B2%B9/2478">纯粹</a>自由的计算机软件，运行在<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上，提供图形<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/3373875">桌面环境</a>。 GNOME 包含了 Panel （用来启动此程式和显示目前的状态）、桌面 （应用程式和资料放置的地方）及一系列的标准桌面工具和应用程式，并且能让各个应用程式都能正常地运作。 GNOME是Linux<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上最常用的图形桌面环境之一。 </p>
-</blockquote>
-<h2 id="4-2-安装X-windows的基础"><a href="#4-2-安装X-windows的基础" class="headerlink" title="4.2 安装X-windows的基础"></a>4.2 安装X-windows的基础</h2><p><strong>①</strong>执行如下命令来去安装X-windows的基础</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x-<span class="variable language_">window</span>-system-core</span><br></pre></td></tr></table></figure>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Jok Brown
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.likepanda.cn/2022/03/25/bochs/" title="bochs">http://www.likepanda.cn/2022/03/25/bochs/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p><strong>③</strong>安装完毕以后，如下所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p82zu96rc3.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="3安装登录管理器"><a href="#3安装登录管理器" class="headerlink" title="3安装登录管理器"></a>3安装登录管理器</h2><p><strong>①</strong>执行如下命令安装登陆管理器</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gdm3</span><br></pre></td></tr></table></figure>
 
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p><strong>③</strong>安装完毕，如下图所示 </p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/wdd2st2uxr.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="4-安装Ubuntu的桌面"><a href="#4-安装Ubuntu的桌面" class="headerlink" title="4 安装Ubuntu的桌面"></a>4 安装Ubuntu的桌面</h2><p>①执行如下命令安装 ubuntu-desktop 应用</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ubuntu-desktop</span><br></pre></td></tr></table></figure>
+        
 
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<h2 id="4-5-安装Gnome相关配套软件"><a href="#4-5-安装Gnome相关配套软件" class="headerlink" title="4.5 安装Gnome相关配套软件"></a>4.5 安装Gnome相关配套软件</h2><p>执行如下命令安装Gnome相关配套软件 <strong>①</strong>执行命令如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal</span><br></pre></td></tr></table></figure>
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/03/25/build-vnc/" rel="next" title="build_vnc">
+                  build_vnc <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
 
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p><strong>③</strong>如下图所示，已经成功安装完毕</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/dg8a3zm0x8.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="6-修改VNC配置文件"><a href="#6-修改VNC配置文件" class="headerlink" title="6 修改VNC配置文件"></a>6 修改VNC配置文件</h2><p><strong>①</strong>修改/.vnc/xstartup中的文件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vi ~<span class="regexp">/.vnc/</span>xstartup</span><br></pre></td></tr></table></figure>
 
-<p>将配置文件修改为</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#!<span class="regexp">/bin/</span>sh</span><br><span class="line"># <span class="title class_">Uncomment</span> the following two lines <span class="keyword">for</span> normal <span class="attr">desktop</span>:</span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">XKL_XMODMAP_DISABLE</span>=<span class="number">1</span></span><br><span class="line"> unset <span class="variable constant_">SESSION_MANAGER</span></span><br><span class="line"># exec /etc/<span class="variable constant_">X11</span>/xinit/xinitrc</span><br><span class="line">unset <span class="variable constant_">DBUS_SESSION_BUS_ADDRESS</span></span><br><span class="line">gnome-panel &amp;</span><br><span class="line">gnome-settings-daemon &amp;</span><br><span class="line">metacity &amp;</span><br><span class="line">nautilus &amp;</span><br><span class="line">gnome-terminal &amp;</span><br></pre></td></tr></table></figure>
 
-<p>修改完毕，如下图所示 </p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/jt1i97qjds.png?imageView2/2/w/1620" alt="img"></p>
-<p><strong>②</strong>修改完毕以后，按:wq键进行保存</p>
-<h2 id="7-重启桌面进程"><a href="#7-重启桌面进程" class="headerlink" title="7 重启桌面进程"></a>7 重启桌面进程</h2><p><strong>①</strong>杀掉原桌面进程，输入命令（其中的:1是桌面号）：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver -kill :<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>②</strong>输入以下命令生成新的会话：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver :<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p>执行成功以后，如下图所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/6dszkqfswp.png?imageView2/2/w/1620" alt="img"></p>
-<h1 id="本地使用VNC连接"><a href="#本地使用VNC连接" class="headerlink" title="本地使用VNC连接"></a>本地使用VNC连接</h1><h2 id="1-下载VNC-Viewer"><a href="#1-下载VNC-Viewer" class="headerlink" title="1 下载VNC Viewer"></a>1 下载VNC Viewer</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p929x5fkvw.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="2连接VNC"><a href="#2连接VNC" class="headerlink" title="2连接VNC"></a>2连接VNC</h2><p>① 在VNC Viewer 软件中，输入对应的公网IP地址:1 的方式进行连接</p>
-<p>②点击”Continue”选项</p>
-<p>③再此输入之前设置的VNC的密码，并点击“OK”进行下一步</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>使用QT编写的代码编辑器</title>
-    <url>/2022/03/18/codeedit/</url>
-    <content><![CDATA[<p>使用QT编写的代码编辑器,采用MVC模式架构，数据与代码分离</p>
-<span id="more"></span>
 
-<h3 id="使用QT编写的代码编辑器"><a href="#使用QT编写的代码编辑器" class="headerlink" title="使用QT编写的代码编辑器"></a>使用QT编写的代码编辑器</h3><p>界面展示</p>
-<p><img src="/2022/03/18/codeedit/main.png"></p>
-<p>核心编辑框使用外部库QScilllina</p>
-<p>采用MVC模式架构，数据与代码分离</p>
-<p>TreeMenu实现不同Item映射不同菜单</p>
-<p><img src="/2022/03/18/codeedit/code.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>pinn相关研究与研究进展</title>
-    <url>/2022/03/18/pinn/</url>
-    <content><![CDATA[<p>pinn相关研究与研究进展,相关论文总结与文献综述</p>
-<span id="more"></span>
+</div>
+  </main>
 
-<h1 id="pinn求解非线性PDE"><a href="#pinn求解非线性PDE" class="headerlink" title="pinn求解非线性PDE"></a>pinn求解非线性PDE</h1><h2 id="引入相关库文件"><a href="#引入相关库文件" class="headerlink" title="引入相关库文件"></a>引入相关库文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">torch.set_default_tensor_type(torch.DoubleTensor)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  <footer class="footer">
+    <div class="footer-inner">
 
-<h2 id="构造网络"><a href="#构造网络" class="headerlink" title="构造网络"></a>构造网络</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 继承torch的nn模块</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Net</span>(nn.Module):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化构造函数</span></span><br><span class="line">    <span class="comment"># hidden_num:   隐藏层数量</span></span><br><span class="line">    <span class="comment"># vertices_num: 每层神经元个数</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, hidden_num, vertices_num</span>):</span><br><span class="line">        <span class="built_in">super</span>(Net, self).__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输入层</span></span><br><span class="line">        self.input_layer = nn.Linear(<span class="number">2</span>, vertices_num)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 隐藏层</span></span><br><span class="line">        self.hidden_layers = nn.ModuleList([nn.Linear(vertices_num, vertices_num) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(hidden_num)])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输出层</span></span><br><span class="line">        self.output_layer = nn.Linear(vertices_num, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 反向传播</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        o = self.act(self.input_layer(x))</span><br><span class="line">        <span class="keyword">for</span> i, li <span class="keyword">in</span> <span class="built_in">enumerate</span>(self.hidden_layers):</span><br><span class="line">            o = self.act(li(o))</span><br><span class="line">        out = self.output_layer(o)</span><br><span class="line">        <span class="keyword">return</span> out</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 激活函数:反正切</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">act</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">return</span> x * torch.sigmoid(x)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置加速器:Adam</span></span><br><span class="line">    <span class="comment"># lr: 误差控制</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_optimizer</span>(<span class="params">self, lr</span>):</span><br><span class="line">        <span class="keyword">return</span> torch.optim.Adam(self.parameters(), lr)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">loss = nn.MSELoss(reduction=<span class="string">&#x27;mean&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h2 id="损失函数构造"><a href="#损失函数构造" class="headerlink" title="损失函数构造"></a>损失函数构造</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 求偏导函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradients</span>(<span class="params">u, x, order=<span class="number">1</span></span>):</span><br><span class="line">    <span class="keyword">if</span> order == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> torch.autograd.grad(u, x, grad_outputs=torch.ones_like(u),</span><br><span class="line">                                   create_graph=<span class="literal">True</span>,</span><br><span class="line">                                   only_inputs=<span class="literal">True</span>, )[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> gradients(gradients(u, x), x, order=order - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">interior</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = -<span class="number">1</span> + <span class="number">2</span> * torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">boundary2</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = <span class="number">1</span> - <span class="number">2</span> * torch.ones(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">boundary1</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = torch.ones(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">initial_value</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    cond = -torch.sin(np.pi * x)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>).requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_interior</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = interior()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(gradients(uxy, t, <span class="number">1</span>) + gradients(uxy, x, <span class="number">1</span>) * uxy - (<span class="number">0.01</span> / np.pi) * gradients(uxy, x, <span class="number">2</span>), cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_boundary2</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = boundary2()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_boundary1</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = boundary1()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_initial_value</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = initial_value()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="copyright">
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jok Brown</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
 
-<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">net = Net(<span class="number">10</span>, <span class="number">24</span>)</span><br><span class="line"></span><br><span class="line">loss_data = []</span><br><span class="line"></span><br><span class="line">opt = torch.optim.Adam(params=net.parameters(), lr=<span class="number">1e-7</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10000</span>):</span><br><span class="line">    opt.zero_grad()</span><br><span class="line">    l = loss_interior(net) + loss_boundary1(net) + loss_initial_value(net) + loss_boundary2(net)</span><br><span class="line">    l.backward()</span><br><span class="line">    opt.step()</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        <span class="built_in">print</span>(l.item())</span><br><span class="line">    loss_data.append([i, l.item()])</span><br><span class="line"></span><br><span class="line">torch.save(net, <span class="string">&#x27;./data/net.pkl&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    </div>
+  </footer>
 
-<p>$$<br>\displaystyle<br>        \left{\begin{array}{c}</p>
-<pre><code>        \frac&#123;\partial C&#125;&#123;\partial t&#125;=D \frac&#123;\partial^&#123;2&#125; C&#125;&#123;\partial x^&#123;2&#125;&#125; ;(0&lt;x&lt;1, t&gt;0) 
-        \\
-        \frac&#123;\partial C&#125;&#123;\partial x&#125;(0, t)=\pi e^&#123;-\pi^&#123;2&#125; t&#125; \cos (\pi x) 
-        \\ 
-        C(l, t)=0 ;(0 \leq x \leq 1) 
-        \\
-        C(x, 0)=\sin (\pi x) ;(t \geq 0)
-    \end&#123;array&#125;\right.
-</code></pre>
-<p>$$</p>
-]]></content>
-      <tags>
-        <tag>pinn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mainpage</title>
-    <url>/2022/03/18/mainpage/</url>
-    <content><![CDATA[<p>记录一些常见的latex公式，方便书写</p>
-<span id="more"></span>
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
 
-<h3 id="1-数学公式"><a href="#1-数学公式" class="headerlink" title="1.数学公式"></a>1.数学公式</h3><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>公式</th>
-<th></th>
-<th>符号</th>
-<th>公式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>\int</td>
-<td>$\int$</td>
-<td></td>
-<td>a_1</td>
-<td>$a_1$</td>
-</tr>
-<tr>
-<td>\iint</td>
-<td>$\iint$</td>
-<td></td>
-<td>a^2</td>
-<td>$a^2$</td>
-</tr>
-<tr>
-<td>\iiint</td>
-<td>$\iiint$</td>
-<td></td>
-<td>\bar{x}</td>
-<td>$\bar{x}$</td>
-</tr>
-<tr>
-<td>\lim</td>
-<td>$\lim_{n =1}$</td>
-<td></td>
-<td>\vec{x}</td>
-<td>$\vec{x}$</td>
-</tr>
-<tr>
-<td>\lim\limits_{n = 1}</td>
-<td>$\lim\limits_{n=1}$</td>
-<td></td>
-<td>\dots</td>
-<td>$x_1,x_2,\dots,x_n$</td>
-</tr>
-<tr>
-<td>\sum</td>
-<td>$\sum$</td>
-<td></td>
-<td>\cdots</td>
-<td>$x_1,x_2,\cdots,x_n$</td>
-</tr>
-<tr>
-<td>\prod</td>
-<td>$\prod$</td>
-<td></td>
-<td>\ddots</td>
-<td>$x_1,x_2,\ddots,x_n$</td>
-</tr>
-<tr>
-<td>\sum\limits_{n = 1}^{\infty}</td>
-<td>$\sum\limits_{n = 1}^{\infty}$</td>
-<td></td>
-<td>\vdots</td>
-<td>$x_1,x_2,\vdots,x_n$</td>
-</tr>
-<tr>
-<td>\dfrac{f(x)}{g(x)}</td>
-<td>$\dfrac{f(x)}{g(x)}$</td>
-<td></td>
-<td>矩阵</td>
-<td>$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
-</tr>
-<tr>
-<td>\tfrac{f(x)}{g(x)}(默认)</td>
-<td>$\tfrac{f(x)}{g(x)}$</td>
-<td></td>
-<td>矩阵</td>
-<td>$\begin{pmatrix} a &amp; b\ c &amp; d \ \end{pmatrix} \quad  \quad \begin{Bmatrix} a &amp; b \ c &amp; d\ \end{Bmatrix}\quad \begin{vmatrix} a &amp; b \ c &amp; d \ \end{vmatrix}\quad \begin{Vmatrix} a &amp; b\ c &amp; d \ \end{Vmatrix}$</td>
-</tr>
-<tr>
-<td>\boxed{a}</td>
-<td>$\boxed{a}$</td>
-<td></td>
-<td>\quad</td>
-<td>$a\quad b$</td>
-</tr>
-<tr>
-<td>\sqrt[n]{x}</td>
-<td>$\sqrt[n]{x}$</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>split对齐</th>
-<th align="right">$\begin{split}f(x)=&amp;ax^2+bx+c\&amp;dy^2+fy+e\end{split}$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>case</td>
-<td align="right">$\begin{cases}f(x)=ax^2+bx+c\g(x)=dy^2+fy+e\end{cases}$</td>
-</tr>
-<tr>
-<td>align对齐</td>
-<td align="right">$\begin{align}f(x)=&amp;ax^2+bx+c\g(x)=&amp;dy^2+fy+e\end{align}$</td>
-</tr>
-<tr>
-<td>array</td>
-<td align="right">$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
-</tr>
-</tbody></table>
-<p><img src="/2022/03/18/mainpage/QQ%E6%88%AA%E5%9B%BE20200304195537.png"></p>
-]]></content>
-      <tags>
-        <tag>main</tag>
-      </tags>
-  </entry>
-</search>
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
