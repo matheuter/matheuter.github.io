@@ -10,6 +10,256 @@
 ]]></content>
   </entry>
   <entry>
+    <title>使用QT编写的代码编辑器</title>
+    <url>/2022/03/18/codeedit/</url>
+    <content><![CDATA[<p>使用QT编写的代码编辑器,采用MVC模式架构，数据与代码分离</p>
+<span id="more"></span>
+
+<h3 id="使用QT编写的代码编辑器"><a href="#使用QT编写的代码编辑器" class="headerlink" title="使用QT编写的代码编辑器"></a>使用QT编写的代码编辑器</h3><p>界面展示</p>
+<p><img src="/2022/03/18/codeedit/main.png"></p>
+<p>核心编辑框使用外部库QScilllina</p>
+<p>采用MVC模式架构，数据与代码分离</p>
+<p>TreeMenu实现不同Item映射不同菜单</p>
+<p><img src="/2022/03/18/codeedit/code.png"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>mainpage</title>
+    <url>/2022/03/18/mainpage/</url>
+    <content><![CDATA[<p>记录一些常见的latex公式，方便书写</p>
+<span id="more"></span>
+
+<h3 id="1-数学公式"><a href="#1-数学公式" class="headerlink" title="1.数学公式"></a>1.数学公式</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>公式</th>
+<th></th>
+<th>符号</th>
+<th>公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\int</td>
+<td>$\int$</td>
+<td></td>
+<td>a_1</td>
+<td>$a_1$</td>
+</tr>
+<tr>
+<td>\iint</td>
+<td>$\iint$</td>
+<td></td>
+<td>a^2</td>
+<td>$a^2$</td>
+</tr>
+<tr>
+<td>\iiint</td>
+<td>$\iiint$</td>
+<td></td>
+<td>\bar{x}</td>
+<td>$\bar{x}$</td>
+</tr>
+<tr>
+<td>\lim</td>
+<td>$\lim_{n =1}$</td>
+<td></td>
+<td>\vec{x}</td>
+<td>$\vec{x}$</td>
+</tr>
+<tr>
+<td>\lim\limits_{n = 1}</td>
+<td>$\lim\limits_{n=1}$</td>
+<td></td>
+<td>\dots</td>
+<td>$x_1,x_2,\dots,x_n$</td>
+</tr>
+<tr>
+<td>\sum</td>
+<td>$\sum$</td>
+<td></td>
+<td>\cdots</td>
+<td>$x_1,x_2,\cdots,x_n$</td>
+</tr>
+<tr>
+<td>\prod</td>
+<td>$\prod$</td>
+<td></td>
+<td>\ddots</td>
+<td>$x_1,x_2,\ddots,x_n$</td>
+</tr>
+<tr>
+<td>\sum\limits_{n = 1}^{\infty}</td>
+<td>$\sum\limits_{n = 1}^{\infty}$</td>
+<td></td>
+<td>\vdots</td>
+<td>$x_1,x_2,\vdots,x_n$</td>
+</tr>
+<tr>
+<td>\dfrac{f(x)}{g(x)}</td>
+<td>$\dfrac{f(x)}{g(x)}$</td>
+<td></td>
+<td>矩阵</td>
+<td>$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
+</tr>
+<tr>
+<td>\tfrac{f(x)}{g(x)}(默认)</td>
+<td>$\tfrac{f(x)}{g(x)}$</td>
+<td></td>
+<td>矩阵</td>
+<td>$\begin{pmatrix} a &amp; b\ c &amp; d \ \end{pmatrix} \quad  \quad \begin{Bmatrix} a &amp; b \ c &amp; d\ \end{Bmatrix}\quad \begin{vmatrix} a &amp; b \ c &amp; d \ \end{vmatrix}\quad \begin{Vmatrix} a &amp; b\ c &amp; d \ \end{Vmatrix}$</td>
+</tr>
+<tr>
+<td>\boxed{a}</td>
+<td>$\boxed{a}$</td>
+<td></td>
+<td>\quad</td>
+<td>$a\quad b$</td>
+</tr>
+<tr>
+<td>\sqrt[n]{x}</td>
+<td>$\sqrt[n]{x}$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>split对齐</th>
+<th align="right">$\begin{split}f(x)=&amp;ax^2+bx+c\&amp;dy^2+fy+e\end{split}$</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>case</td>
+<td align="right">$\begin{cases}f(x)=ax^2+bx+c\g(x)=dy^2+fy+e\end{cases}$</td>
+</tr>
+<tr>
+<td>align对齐</td>
+<td align="right">$\begin{align}f(x)=&amp;ax^2+bx+c\g(x)=&amp;dy^2+fy+e\end{align}$</td>
+</tr>
+<tr>
+<td>array</td>
+<td align="right">$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
+</tr>
+</tbody></table>
+<p><img src="/2022/03/18/mainpage/QQ%E6%88%AA%E5%9B%BE20200304195537.png"></p>
+]]></content>
+      <tags>
+        <tag>main</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pinn相关研究与研究进展</title>
+    <url>/2022/03/18/pinn/</url>
+    <content><![CDATA[<p>pinn相关研究与研究进展,相关论文总结与文献综述</p>
+<span id="more"></span>
+
+<h1 id="pinn求解非线性PDE"><a href="#pinn求解非线性PDE" class="headerlink" title="pinn求解非线性PDE"></a>pinn求解非线性PDE</h1><h2 id="引入相关库文件"><a href="#引入相关库文件" class="headerlink" title="引入相关库文件"></a>引入相关库文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">torch.set_default_tensor_type(torch.DoubleTensor)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="构造网络"><a href="#构造网络" class="headerlink" title="构造网络"></a>构造网络</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 继承torch的nn模块</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Net</span>(nn.Module):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化构造函数</span></span><br><span class="line">    <span class="comment"># hidden_num:   隐藏层数量</span></span><br><span class="line">    <span class="comment"># vertices_num: 每层神经元个数</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, hidden_num, vertices_num</span>):</span><br><span class="line">        <span class="built_in">super</span>(Net, self).__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输入层</span></span><br><span class="line">        self.input_layer = nn.Linear(<span class="number">2</span>, vertices_num)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 隐藏层</span></span><br><span class="line">        self.hidden_layers = nn.ModuleList([nn.Linear(vertices_num, vertices_num) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(hidden_num)])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输出层</span></span><br><span class="line">        self.output_layer = nn.Linear(vertices_num, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 反向传播</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        o = self.act(self.input_layer(x))</span><br><span class="line">        <span class="keyword">for</span> i, li <span class="keyword">in</span> <span class="built_in">enumerate</span>(self.hidden_layers):</span><br><span class="line">            o = self.act(li(o))</span><br><span class="line">        out = self.output_layer(o)</span><br><span class="line">        <span class="keyword">return</span> out</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 激活函数:反正切</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">act</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">return</span> x * torch.sigmoid(x)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置加速器:Adam</span></span><br><span class="line">    <span class="comment"># lr: 误差控制</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_optimizer</span>(<span class="params">self, lr</span>):</span><br><span class="line">        <span class="keyword">return</span> torch.optim.Adam(self.parameters(), lr)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">loss = nn.MSELoss(reduction=<span class="string">&#x27;mean&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="损失函数构造"><a href="#损失函数构造" class="headerlink" title="损失函数构造"></a>损失函数构造</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 求偏导函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradients</span>(<span class="params">u, x, order=<span class="number">1</span></span>):</span><br><span class="line">    <span class="keyword">if</span> order == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> torch.autograd.grad(u, x, grad_outputs=torch.ones_like(u),</span><br><span class="line">                                   create_graph=<span class="literal">True</span>,</span><br><span class="line">                                   only_inputs=<span class="literal">True</span>, )[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> gradients(gradients(u, x), x, order=order - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">interior</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = -<span class="number">1</span> + <span class="number">2</span> * torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">boundary2</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = <span class="number">1</span> - <span class="number">2</span> * torch.ones(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">boundary1</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = torch.ones(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">initial_value</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    cond = -torch.sin(np.pi * x)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>).requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_interior</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = interior()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(gradients(uxy, t, <span class="number">1</span>) + gradients(uxy, x, <span class="number">1</span>) * uxy - (<span class="number">0.01</span> / np.pi) * gradients(uxy, x, <span class="number">2</span>), cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_boundary2</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = boundary2()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_boundary1</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = boundary1()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_initial_value</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = initial_value()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">net = Net(<span class="number">10</span>, <span class="number">24</span>)</span><br><span class="line"></span><br><span class="line">loss_data = []</span><br><span class="line"></span><br><span class="line">opt = torch.optim.Adam(params=net.parameters(), lr=<span class="number">1e-7</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10000</span>):</span><br><span class="line">    opt.zero_grad()</span><br><span class="line">    l = loss_interior(net) + loss_boundary1(net) + loss_initial_value(net) + loss_boundary2(net)</span><br><span class="line">    l.backward()</span><br><span class="line">    opt.step()</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        <span class="built_in">print</span>(l.item())</span><br><span class="line">    loss_data.append([i, l.item()])</span><br><span class="line"></span><br><span class="line">torch.save(net, <span class="string">&#x27;./data/net.pkl&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\displaystyle<br>        \left{\begin{array}{c}</p>
+<pre><code>        \frac&#123;\partial C&#125;&#123;\partial t&#125;=D \frac&#123;\partial^&#123;2&#125; C&#125;&#123;\partial x^&#123;2&#125;&#125; ;(0&lt;x&lt;1, t&gt;0) 
+        \\
+        \frac&#123;\partial C&#125;&#123;\partial x&#125;(0, t)=\pi e^&#123;-\pi^&#123;2&#125; t&#125; \cos (\pi x) 
+        \\ 
+        C(l, t)=0 ;(0 \leq x \leq 1) 
+        \\
+        C(x, 0)=\sin (\pi x) ;(t \geq 0)
+    \end&#123;array&#125;\right.
+</code></pre>
+<p>$$</p>
+]]></content>
+      <tags>
+        <tag>pinn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>build_vnc</title>
+    <url>/2022/03/25/build-vnc/</url>
+    <content><![CDATA[<h1 id="虚拟网络计算VNC的安装与配置"><a href="#虚拟网络计算VNC的安装与配置" class="headerlink" title="虚拟网络计算VNC的安装与配置"></a>虚拟网络计算VNC的安装与配置</h1><h2 id="1-切换用户为Root"><a href="#1-切换用户为Root" class="headerlink" title="1 切换用户为Root"></a>1 切换用户为Root</h2><p>执行如下命令将当前用户切换至Root用户</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo su root</span><br></pre></td></tr></table></figure>
+
+<p>执行完毕以后，原来的ubuntu用户会切换成root，如下图所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/igj3qn1h6v.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="2-更新获取软件及版本信息"><a href="#2-更新获取软件及版本信息" class="headerlink" title="2 更新获取软件及版本信息"></a>2 更新获取软件及版本信息</h2><p>执行如下命令来更新获取最新的软件及版本信息</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
+
+<p>执行完毕以后，如下所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/evnno0b6zq.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="3-安装VNC4Server"><a href="#3-安装VNC4Server" class="headerlink" title="3 安装VNC4Server"></a>3 安装VNC4Server</h2><p>通过执行如下命令来安装VNC</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get install vnc4server</span><br></pre></td></tr></table></figure>
+
+<p>执行完毕，如下图所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/in2iv6eus9.png?imageView2/2/w/1620" alt="img"></p>
+<p>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p>安装完毕以后，如下图所示：</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/kgliyfif39.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="4-启动VNC"><a href="#4-启动VNC" class="headerlink" title="4 启动VNC"></a>4 启动VNC</h2><p>我们那执行如下命令启动VNC服务</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver</span><br></pre></td></tr></table></figure>
+
+<p>启动完毕如下所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/yhmre3rbck.png?imageView2/2/w/1620" alt="img"></p>
+<p>设置VNC的密码</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/1kdp4jbljv.png?imageView2/2/w/1620" alt="img"></p>
+<p>当我们看到New ‘VM-32-4-ubuntu:1 (root)’ desktop is VM-32-4-ubuntu:1字样的时候，说明启动成功。</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/hl4n7vbd9q.png?imageView2/2/w/1620" alt="img"></p>
+<hr>
+<h1 id="Gnome-桌面环境安装与配置"><a href="#Gnome-桌面环境安装与配置" class="headerlink" title="Gnome 桌面环境安装与配置"></a>Gnome 桌面环境安装与配置</h1><h2 id="1-Gnome-桌面简介"><a href="#1-Gnome-桌面简介" class="headerlink" title="1 Gnome 桌面简介"></a>1 Gnome 桌面简介</h2><blockquote>
+<p> GNOME是一套<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E7%BA%AF%E7%B2%B9/2478">纯粹</a>自由的计算机软件，运行在<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上，提供图形<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/3373875">桌面环境</a>。 GNOME 包含了 Panel （用来启动此程式和显示目前的状态）、桌面 （应用程式和资料放置的地方）及一系列的标准桌面工具和应用程式，并且能让各个应用程式都能正常地运作。 GNOME是Linux<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上最常用的图形桌面环境之一。 </p>
+</blockquote>
+<h2 id="4-2-安装X-windows的基础"><a href="#4-2-安装X-windows的基础" class="headerlink" title="4.2 安装X-windows的基础"></a>4.2 安装X-windows的基础</h2><p><strong>①</strong>执行如下命令来去安装X-windows的基础</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x-<span class="variable language_">window</span>-system-core</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p><strong>③</strong>安装完毕以后，如下所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p82zu96rc3.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="3安装登录管理器"><a href="#3安装登录管理器" class="headerlink" title="3安装登录管理器"></a>3安装登录管理器</h2><p><strong>①</strong>执行如下命令安装登陆管理器</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gdm3</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p><strong>③</strong>安装完毕，如下图所示 </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/wdd2st2uxr.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="4-安装Ubuntu的桌面"><a href="#4-安装Ubuntu的桌面" class="headerlink" title="4 安装Ubuntu的桌面"></a>4 安装Ubuntu的桌面</h2><p>①执行如下命令安装 ubuntu-desktop 应用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ubuntu-desktop</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<h2 id="4-5-安装Gnome相关配套软件"><a href="#4-5-安装Gnome相关配套软件" class="headerlink" title="4.5 安装Gnome相关配套软件"></a>4.5 安装Gnome相关配套软件</h2><p>执行如下命令安装Gnome相关配套软件 <strong>①</strong>执行命令如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal</span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
+<p><strong>③</strong>如下图所示，已经成功安装完毕</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/dg8a3zm0x8.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="6-修改VNC配置文件"><a href="#6-修改VNC配置文件" class="headerlink" title="6 修改VNC配置文件"></a>6 修改VNC配置文件</h2><p><strong>①</strong>修改/.vnc/xstartup中的文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vi ~<span class="regexp">/.vnc/</span>xstartup</span><br></pre></td></tr></table></figure>
+
+<p>将配置文件修改为</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#!<span class="regexp">/bin/</span>sh</span><br><span class="line"># <span class="title class_">Uncomment</span> the following two lines <span class="keyword">for</span> normal <span class="attr">desktop</span>:</span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">XKL_XMODMAP_DISABLE</span>=<span class="number">1</span></span><br><span class="line"> unset <span class="variable constant_">SESSION_MANAGER</span></span><br><span class="line"># exec /etc/<span class="variable constant_">X11</span>/xinit/xinitrc</span><br><span class="line">unset <span class="variable constant_">DBUS_SESSION_BUS_ADDRESS</span></span><br><span class="line">gnome-panel &amp;</span><br><span class="line">gnome-settings-daemon &amp;</span><br><span class="line">metacity &amp;</span><br><span class="line">nautilus &amp;</span><br><span class="line">gnome-terminal &amp;</span><br></pre></td></tr></table></figure>
+
+<p>修改完毕，如下图所示 </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/jt1i97qjds.png?imageView2/2/w/1620" alt="img"></p>
+<p><strong>②</strong>修改完毕以后，按:wq键进行保存</p>
+<h2 id="7-重启桌面进程"><a href="#7-重启桌面进程" class="headerlink" title="7 重启桌面进程"></a>7 重启桌面进程</h2><p><strong>①</strong>杀掉原桌面进程，输入命令（其中的:1是桌面号）：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver -kill :<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>②</strong>输入以下命令生成新的会话：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver :<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>执行成功以后，如下图所示</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/6dszkqfswp.png?imageView2/2/w/1620" alt="img"></p>
+<h1 id="本地使用VNC连接"><a href="#本地使用VNC连接" class="headerlink" title="本地使用VNC连接"></a>本地使用VNC连接</h1><h2 id="1-下载VNC-Viewer"><a href="#1-下载VNC-Viewer" class="headerlink" title="1 下载VNC Viewer"></a>1 下载VNC Viewer</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p929x5fkvw.png?imageView2/2/w/1620" alt="img"></p>
+<h2 id="2连接VNC"><a href="#2连接VNC" class="headerlink" title="2连接VNC"></a>2连接VNC</h2><p>① 在VNC Viewer 软件中，输入对应的公网IP地址:1 的方式进行连接</p>
+<p>②点击”Continue”选项</p>
+<p>③再此输入之前设置的VNC的密码，并点击“OK”进行下一步</p>
+]]></content>
+  </entry>
+  <entry>
     <title>bochs</title>
     <url>/2022/03/25/bochs/</url>
     <content><![CDATA[<h1 id="BOCHS虚拟端口号"><a href="#BOCHS虚拟端口号" class="headerlink" title="BOCHS虚拟端口号"></a>BOCHS虚拟端口号</h1><span id="more"></span>
@@ -222,8 +472,9 @@
 <td align="center">PCI Bus #1d</td>
 </tr>
 </tbody></table>
-<h2 id="I-O-Ports-and-Controllers-on-IBM-Compatibles-and-PS-2"><a href="#I-O-Ports-and-Controllers-on-IBM-Compatibles-and-PS-2" class="headerlink" title="I/O Ports and Controllers on IBM Compatibles and PS/2"></a>I/O Ports and Controllers on IBM Compatibles and PS/2</h2><p>The following gives the input and output ports used by IBM PC compatible<br>computers.  Most ports allow access to input and output device<br>controllers.  A controller may have several internal registers which can<br>be set to fix the operation of that controller, read its status, or send<br>data to it.  Other ports access discrete logic latches or registers.<br>Some ports are write-only or read-only.  It is even possible for a port<br>to be write-only and read-only by using two different registers at the<br>same port address.  Port addresses can range from 0 to 0FFFFH (64K<br>ports). However, PC system boards generally reserve only the first 1024<br>(0-3FFH). The AT and PS/2 freely employ ports above 3FFH for extended<br>applications, such as the two port asynchronous adaptors and network<br>adaptors.</p>
-<p>Ports from 0-0FFH have a special significance, since the 80x86 can use<br>byte rather than word port addresses in the IN and OUT instructions.</p>
+<h2 id="I-O-Ports-and-Controllers-on-IBM-Compatibles-and-PS-2"><a href="#I-O-Ports-and-Controllers-on-IBM-Compatibles-and-PS-2" class="headerlink" title="I/O Ports and Controllers on IBM Compatibles and PS/2"></a>I/O Ports and Controllers on IBM Compatibles and PS/2</h2><p>The following gives the input and output ports used by IBM PC compatible computers.  Most ports allow access to input and output device controllers.  A controller may have several internal registers which can be set to fix the operation of that controller, read its status, or send data to it.  Other ports access discrete logic latches or registers.</p>
+<p>Some ports are write-only or read-only.  It is even possible for a port to be write-only and read-only by using two different registers at the same port address.  Port addresses can range from 0 to 0FFFFH (64K ports). However, PC system boards generally reserve only the first 1024 (0-3FFH). The AT and PS/2 freely employ ports above 3FFH for extended applications, such as the two port asynchronous adaptors and network adaptors.</p>
+<p>Ports from 0-0FFH have a special significance, since the 80x86 can use byte rather than word port addresses in the IN and OUT instructions.</p>
 <h3 id="Port-Function-and-Chip-Server-if-present"><a href="#Port-Function-and-Chip-Server-if-present" class="headerlink" title="Port    Function and Chip Server (if present)"></a>Port    Function and Chip Server (if present)</h3><p> 000-00F  DMA Direct Memory Access Processor 8237A-5 or equivalent<br> 010-01F  Extended DMA on PS/2 60-80<br> 020-021  Interrupt Generation 8259A Master Interrupt Processor<br> 030-03F  AT 8259 Master Interrupt Controller extended ports<br>   040    System Timer 8253  Count Reg, Channel 0 System timer<br>   042    Count Reg, Channel 2 Speaker audio<br>   043    Control byte for channels 0 or 2<br>   044    Extended Timer for PS/2 Count Reg, Channel 3 Watchdog timer<br>   047    Control byte for channel 3<br> 050-05F  AT 8254 Timer<br> 060-063  PPI Status Port PPI 8255 Keyboard, PC read switches SW1, SW2<br>   064    Extended PPI PS/2 8042 Keyboard, Aux. Device Controller<br> 070-071  AT and PS/2 CMOS ports RTC/CMOS MC146818 Clock and PS/2 NMI mask<br> 081-083  DMA Controller Registers 0-2<br>   087    DMA Controller Register 3<br> 089-08B  DMA Controller Registers 4-6<br>   08F    DMA Controller Register 7<br>   090    Central Arbitration Control Port PS/2<br>   091    Card Selection Feedback PS/2<br>   092    System Control Port A on PS/2: Control and Status Register<br>   094    Video System Setup on PS/2: Programmable Option Select (POS) Setup<br>   095    PS/2 Reserved<br>   096    POS Channel Select on PS/2: Program Option Select Adapter<br>   0A0    PC NMI Mask Register on PC: Discrete latch for masking the NMI<br> 0A0-0A1  Slave Interrupts on AT, PS/2 8259A Slave Interrupt Controller<br> 0B0-0BF  AT 8259 Slave Interrupt Controller extended ports<br> 0C0-0DF  DMA Controller on PS/2 or Sound Generator on PCjr (0C0 port)<br> 0E0-0EF  AT reserved<br> 0F0-0FF  Math Coprocessor 80x87 on PS/2 or PCjr diskette controller<br> 100-107  Program Option Select on PS/2: POS Registers<br> 110-1EF  AT I/O options<br> 1F0-1F8  AT Fixed Disk Controller<br> 200-20F  Game I/O Ports, discrete logic (Active port: 201H)<br> 210-217  PC Expansion Unit<br>   21F    AT reserved<br> 248-24F  Serial #8 option 8250 ACE<br> 268-26F  Serial #6 option 8250 ACE<br> 278-27F  Parallel Port LPT3: discrete logic<br> 2A2-2A3  Clock option: MSM58321RS Clock Chip<br> 2B0-2DF  Alternate EGA on PC and AT<br>   2E1    AT GPIB Adapter 0<br> 2E2-2E3  AT Data Acquisition adapter 0</p>
 <p> 2E8-2EF  Serial Port COM4: on PC 8250 ACE used with IRQ3<br> 2F8-2FF  Serial Port COM2: on PC and PS/2 ACE used with IRQ3<br> 300-31F  PC Prototype card on PC<br> 320-32F  XT Fixed disk Controller<br> 348-34F  Serial #7 option 8250 ACE<br> 368-36F  Serial #5 option 8250 ACE<br> 378-37F  Parallel Port LPT2: discrete logic parallel port<br> 380-38C  SBSI on PC, AT Secondary Binary Synchronous Interface<br> 3A0-3A9  PBSI on PC, AT Primary Binary Synchronous Interface<br>   3B4    Monochrome Index Reg.   6845 Video Controller CRT Index Register<br>   3B5    Monochrome Control Regs.6845 Video CRT Control Registers<br>   3B8    Mono. Control Port      6845 CRT Control Port<br>   3BA    Mono. Status/Feature    Input Status/Output Feature Control Reg.<br> 3BC-3BE  Parallel Port LPT1: discrete logic parallel port using IRQ7<br> 3C0-3C5  Video Subsystem         VGA Attribute and Sequencer Registers<br> 3C6-3C8  Video DAC               VGA Digital-to-Analog Converter<br> 3CE-3CF  Video Subsystem         VGA Graphics Registers<br>   3D4    PC Color Graphics       6845 Video Controller CRT Index Register<br>   3D5    PC Color Graphics       6845 Video CRT Control Registers<br>   3DA    PC Color Status/Feature Input Status/Output Feature Control Reg.<br> 3E8-3EF  Serial Port COM3:on PC 8250 ACE used with IRQ3<br> 3F0-3F7  Diskette Controller 765 Chip<br> 3F8-3FF  Serial Port COM1: on  PC and PS/2 ACE used with IRQ4<br> 6E2-6E3  AT Data Acquisition Adapter 1<br> 790-793  Cluster Adapter 1<br> AE2-AE3  AT Data Acquisition Adapter 2<br> B90-B93  Cluster Adapter 2<br> EE2-EE3  AT Data Acquisition Adapter 3<br> B90-B93  Cluster Adapter 3<br>  22E1    AT GPIB Adapter 1<br>2390-2393 Cluster Adapter 4<br>  42E1    AT GPIB Adapter 2<br>  3220    Serial Port COM3:   PS/2 Asychronous Adaptor<br>  3228    Serial Port COM4:   PS/2 Asychronous Adaptor<br>  4220    Serial Port COM5:   PS/2 Asychronous Adaptor<br>  4228    Serial Port COM6:   PS/2 Asychronous Adaptor<br>  42E1    AT GPIB Adapter 2<br>  5220    Serial Port COM7:   PS/2 Asychronous Adaptor<br>  5228    Serial Port COM8:   PS/2 Asychronous Adaptor<br>  62E1    AT GPIB Adapter 3<br>  82E1    AT GPIB Adapter 4<br>  A2E1    AT GPIB Adapter 5<br>  C2E1    AT GPIB Adapter 6<br>  E2E1    AT GPIB Adapter 7</p>
 <h3 id="Ports-00-0FH-and-81H-83H-The-8237A-DMA-Controller-Chip-and-PS-2-Extensions"><a href="#Ports-00-0FH-and-81H-83H-The-8237A-DMA-Controller-Chip-and-PS-2-Extensions" class="headerlink" title="Ports 00-0FH and 81H-83H: The 8237A DMA Controller Chip and PS/2 Extensions"></a>Ports 00-0FH and 81H-83H: The 8237A DMA Controller Chip and PS/2 Extensions</h3><p>The 8237A chip controls direct memory access (DMA) to and from a set of<br>16 ports from 000H to 00FH.  There are three DMA channels available. DMA<br>is performed by stealing a CPU bus cycle, setting a wait state if<br>necessary, to transfer each byte.  Ports 081H to 083H are DMA page<br>register ports for DMA channel 1-3.  Amoung the 20 bits for memory<br>addressing during DMA transfer, the first four bits are the output of<br>the page register.  The last 16 bits are output from the 8237A.</p>
@@ -998,255 +1249,5 @@ Bit 7 Enable System Microprocessor Cycle  ESMC
 <p>Ports 3220-3227, 3228-322E, 4220-4227, 4228-422E, 5220-5227, 5228-522E:</p>
 <p>These are the assigned COM3-8 serial ports on the PS/2, all utilizing<br>IRQ3 interrupt line.  For programming information, see ports 2E8-2EE.</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>build_vnc</title>
-    <url>/2022/03/25/build-vnc/</url>
-    <content><![CDATA[<h1 id="虚拟网络计算VNC的安装与配置"><a href="#虚拟网络计算VNC的安装与配置" class="headerlink" title="虚拟网络计算VNC的安装与配置"></a>虚拟网络计算VNC的安装与配置</h1><h2 id="1-切换用户为Root"><a href="#1-切换用户为Root" class="headerlink" title="1 切换用户为Root"></a>1 切换用户为Root</h2><p>执行如下命令将当前用户切换至Root用户</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo su root</span><br></pre></td></tr></table></figure>
-
-<p>执行完毕以后，原来的ubuntu用户会切换成root，如下图所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/igj3qn1h6v.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="2-更新获取软件及版本信息"><a href="#2-更新获取软件及版本信息" class="headerlink" title="2 更新获取软件及版本信息"></a>2 更新获取软件及版本信息</h2><p>执行如下命令来更新获取最新的软件及版本信息</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get update</span><br></pre></td></tr></table></figure>
-
-<p>执行完毕以后，如下所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/evnno0b6zq.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="3-安装VNC4Server"><a href="#3-安装VNC4Server" class="headerlink" title="3 安装VNC4Server"></a>3 安装VNC4Server</h2><p>通过执行如下命令来安装VNC</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">apt-get install vnc4server</span><br></pre></td></tr></table></figure>
-
-<p>执行完毕，如下图所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/in2iv6eus9.png?imageView2/2/w/1620" alt="img"></p>
-<p>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p>安装完毕以后，如下图所示：</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/kgliyfif39.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="4-启动VNC"><a href="#4-启动VNC" class="headerlink" title="4 启动VNC"></a>4 启动VNC</h2><p>我们那执行如下命令启动VNC服务</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver</span><br></pre></td></tr></table></figure>
-
-<p>启动完毕如下所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/yhmre3rbck.png?imageView2/2/w/1620" alt="img"></p>
-<p>设置VNC的密码</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/1kdp4jbljv.png?imageView2/2/w/1620" alt="img"></p>
-<p>当我们看到New ‘VM-32-4-ubuntu:1 (root)’ desktop is VM-32-4-ubuntu:1字样的时候，说明启动成功。</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/hl4n7vbd9q.png?imageView2/2/w/1620" alt="img"></p>
-<hr>
-<h1 id="Gnome-桌面环境安装与配置"><a href="#Gnome-桌面环境安装与配置" class="headerlink" title="Gnome 桌面环境安装与配置"></a>Gnome 桌面环境安装与配置</h1><h2 id="1-Gnome-桌面简介"><a href="#1-Gnome-桌面简介" class="headerlink" title="1 Gnome 桌面简介"></a>1 Gnome 桌面简介</h2><blockquote>
-<p> GNOME是一套<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E7%BA%AF%E7%B2%B9/2478">纯粹</a>自由的计算机软件，运行在<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上，提供图形<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/3373875">桌面环境</a>。 GNOME 包含了 Panel （用来启动此程式和显示目前的状态）、桌面 （应用程式和资料放置的地方）及一系列的标准桌面工具和应用程式，并且能让各个应用程式都能正常地运作。 GNOME是Linux<a href="https://links.jianshu.com/go?to=https://baike.baidu.com/item/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/192">操作系统</a>上最常用的图形桌面环境之一。 </p>
-</blockquote>
-<h2 id="4-2-安装X-windows的基础"><a href="#4-2-安装X-windows的基础" class="headerlink" title="4.2 安装X-windows的基础"></a>4.2 安装X-windows的基础</h2><p><strong>①</strong>执行如下命令来去安装X-windows的基础</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install x-<span class="variable language_">window</span>-system-core</span><br></pre></td></tr></table></figure>
-
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p><strong>③</strong>安装完毕以后，如下所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p82zu96rc3.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="3安装登录管理器"><a href="#3安装登录管理器" class="headerlink" title="3安装登录管理器"></a>3安装登录管理器</h2><p><strong>①</strong>执行如下命令安装登陆管理器</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gdm3</span><br></pre></td></tr></table></figure>
-
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p><strong>③</strong>安装完毕，如下图所示 </p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/wdd2st2uxr.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="4-安装Ubuntu的桌面"><a href="#4-安装Ubuntu的桌面" class="headerlink" title="4 安装Ubuntu的桌面"></a>4 安装Ubuntu的桌面</h2><p>①执行如下命令安装 ubuntu-desktop 应用</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ubuntu-desktop</span><br></pre></td></tr></table></figure>
-
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<h2 id="4-5-安装Gnome相关配套软件"><a href="#4-5-安装Gnome相关配套软件" class="headerlink" title="4.5 安装Gnome相关配套软件"></a>4.5 安装Gnome相关配套软件</h2><p>执行如下命令安装Gnome相关配套软件 <strong>①</strong>执行命令如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">sudo apt-get install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal</span><br></pre></td></tr></table></figure>
-
-<p><strong>②</strong>在Do you want to Continue？【Y/n】处，我们选择Y，并按回车继续</p>
-<p><strong>③</strong>如下图所示，已经成功安装完毕</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/dg8a3zm0x8.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="6-修改VNC配置文件"><a href="#6-修改VNC配置文件" class="headerlink" title="6 修改VNC配置文件"></a>6 修改VNC配置文件</h2><p><strong>①</strong>修改/.vnc/xstartup中的文件</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vi ~<span class="regexp">/.vnc/</span>xstartup</span><br></pre></td></tr></table></figure>
-
-<p>将配置文件修改为</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">#!<span class="regexp">/bin/</span>sh</span><br><span class="line"># <span class="title class_">Uncomment</span> the following two lines <span class="keyword">for</span> normal <span class="attr">desktop</span>:</span><br><span class="line"><span class="keyword">export</span> <span class="variable constant_">XKL_XMODMAP_DISABLE</span>=<span class="number">1</span></span><br><span class="line"> unset <span class="variable constant_">SESSION_MANAGER</span></span><br><span class="line"># exec /etc/<span class="variable constant_">X11</span>/xinit/xinitrc</span><br><span class="line">unset <span class="variable constant_">DBUS_SESSION_BUS_ADDRESS</span></span><br><span class="line">gnome-panel &amp;</span><br><span class="line">gnome-settings-daemon &amp;</span><br><span class="line">metacity &amp;</span><br><span class="line">nautilus &amp;</span><br><span class="line">gnome-terminal &amp;</span><br></pre></td></tr></table></figure>
-
-<p>修改完毕，如下图所示 </p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/jt1i97qjds.png?imageView2/2/w/1620" alt="img"></p>
-<p><strong>②</strong>修改完毕以后，按:wq键进行保存</p>
-<h2 id="7-重启桌面进程"><a href="#7-重启桌面进程" class="headerlink" title="7 重启桌面进程"></a>7 重启桌面进程</h2><p><strong>①</strong>杀掉原桌面进程，输入命令（其中的:1是桌面号）：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver -kill :<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>②</strong>输入以下命令生成新的会话：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">vncserver :<span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<p>执行成功以后，如下图所示</p>
-<p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/6dszkqfswp.png?imageView2/2/w/1620" alt="img"></p>
-<h1 id="本地使用VNC连接"><a href="#本地使用VNC连接" class="headerlink" title="本地使用VNC连接"></a>本地使用VNC连接</h1><h2 id="1-下载VNC-Viewer"><a href="#1-下载VNC-Viewer" class="headerlink" title="1 下载VNC Viewer"></a>1 下载VNC Viewer</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-1359560/p929x5fkvw.png?imageView2/2/w/1620" alt="img"></p>
-<h2 id="2连接VNC"><a href="#2连接VNC" class="headerlink" title="2连接VNC"></a>2连接VNC</h2><p>① 在VNC Viewer 软件中，输入对应的公网IP地址:1 的方式进行连接</p>
-<p>②点击”Continue”选项</p>
-<p>③再此输入之前设置的VNC的密码，并点击“OK”进行下一步</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>使用QT编写的代码编辑器</title>
-    <url>/2022/03/18/codeedit/</url>
-    <content><![CDATA[<p>使用QT编写的代码编辑器,采用MVC模式架构，数据与代码分离</p>
-<span id="more"></span>
-
-<h3 id="使用QT编写的代码编辑器"><a href="#使用QT编写的代码编辑器" class="headerlink" title="使用QT编写的代码编辑器"></a>使用QT编写的代码编辑器</h3><p>界面展示</p>
-<p><img src="/2022/03/18/codeedit/main.png"></p>
-<p>核心编辑框使用外部库QScilllina</p>
-<p>采用MVC模式架构，数据与代码分离</p>
-<p>TreeMenu实现不同Item映射不同菜单</p>
-<p><img src="/2022/03/18/codeedit/code.png"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>pinn相关研究与研究进展</title>
-    <url>/2022/03/18/pinn/</url>
-    <content><![CDATA[<p>pinn相关研究与研究进展,相关论文总结与文献综述</p>
-<span id="more"></span>
-
-<h1 id="pinn求解非线性PDE"><a href="#pinn求解非线性PDE" class="headerlink" title="pinn求解非线性PDE"></a>pinn求解非线性PDE</h1><h2 id="引入相关库文件"><a href="#引入相关库文件" class="headerlink" title="引入相关库文件"></a>引入相关库文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">torch.set_default_tensor_type(torch.DoubleTensor)</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> torch.autograd <span class="keyword">import</span> Variable</span><br><span class="line"><span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="构造网络"><a href="#构造网络" class="headerlink" title="构造网络"></a>构造网络</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 继承torch的nn模块</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Net</span>(nn.Module):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 初始化构造函数</span></span><br><span class="line">    <span class="comment"># hidden_num:   隐藏层数量</span></span><br><span class="line">    <span class="comment"># vertices_num: 每层神经元个数</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, hidden_num, vertices_num</span>):</span><br><span class="line">        <span class="built_in">super</span>(Net, self).__init__()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输入层</span></span><br><span class="line">        self.input_layer = nn.Linear(<span class="number">2</span>, vertices_num)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 隐藏层</span></span><br><span class="line">        self.hidden_layers = nn.ModuleList([nn.Linear(vertices_num, vertices_num) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(hidden_num)])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 输出层</span></span><br><span class="line">        self.output_layer = nn.Linear(vertices_num, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 反向传播</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        o = self.act(self.input_layer(x))</span><br><span class="line">        <span class="keyword">for</span> i, li <span class="keyword">in</span> <span class="built_in">enumerate</span>(self.hidden_layers):</span><br><span class="line">            o = self.act(li(o))</span><br><span class="line">        out = self.output_layer(o)</span><br><span class="line">        <span class="keyword">return</span> out</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 激活函数:反正切</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">act</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="keyword">return</span> x * torch.sigmoid(x)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置加速器:Adam</span></span><br><span class="line">    <span class="comment"># lr: 误差控制</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_optimizer</span>(<span class="params">self, lr</span>):</span><br><span class="line">        <span class="keyword">return</span> torch.optim.Adam(self.parameters(), lr)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">loss = nn.MSELoss(reduction=<span class="string">&#x27;mean&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="损失函数构造"><a href="#损失函数构造" class="headerlink" title="损失函数构造"></a>损失函数构造</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 求偏导函数</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gradients</span>(<span class="params">u, x, order=<span class="number">1</span></span>):</span><br><span class="line">    <span class="keyword">if</span> order == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> torch.autograd.grad(u, x, grad_outputs=torch.ones_like(u),</span><br><span class="line">                                   create_graph=<span class="literal">True</span>,</span><br><span class="line">                                   only_inputs=<span class="literal">True</span>, )[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> gradients(gradients(u, x), x, order=order - <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">interior</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = -<span class="number">1</span> + <span class="number">2</span> * torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">boundary2</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = <span class="number">1</span> - <span class="number">2</span> * torch.ones(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">boundary1</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = torch.ones(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    cond = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">initial_value</span>(<span class="params">size=<span class="number">2000</span></span>):</span><br><span class="line">    x = torch.rand(size, <span class="number">1</span>)</span><br><span class="line">    t = torch.zeros(size, <span class="number">1</span>)</span><br><span class="line">    cond = -torch.sin(np.pi * x)</span><br><span class="line">    <span class="keyword">return</span> x.requires_grad_(<span class="literal">True</span>), t.requires_grad_(<span class="literal">True</span>), cond.requires_grad_(<span class="literal">True</span>).requires_grad_(<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_interior</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = interior()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(gradients(uxy, t, <span class="number">1</span>) + gradients(uxy, x, <span class="number">1</span>) * uxy - (<span class="number">0.01</span> / np.pi) * gradients(uxy, x, <span class="number">2</span>), cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_boundary2</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = boundary2()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_boundary1</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = boundary1()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">loss_initial_value</span>(<span class="params">net</span>):</span><br><span class="line">    x, t, cond = initial_value()</span><br><span class="line">    uxy = net(torch.cat([x, t], dim=<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> loss(uxy, cond)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">net = Net(<span class="number">10</span>, <span class="number">24</span>)</span><br><span class="line"></span><br><span class="line">loss_data = []</span><br><span class="line"></span><br><span class="line">opt = torch.optim.Adam(params=net.parameters(), lr=<span class="number">1e-7</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10000</span>):</span><br><span class="line">    opt.zero_grad()</span><br><span class="line">    l = loss_interior(net) + loss_boundary1(net) + loss_initial_value(net) + loss_boundary2(net)</span><br><span class="line">    l.backward()</span><br><span class="line">    opt.step()</span><br><span class="line">    <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(i)</span><br><span class="line">        <span class="built_in">print</span>(l.item())</span><br><span class="line">    loss_data.append([i, l.item()])</span><br><span class="line"></span><br><span class="line">torch.save(net, <span class="string">&#x27;./data/net.pkl&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>$$<br>\displaystyle<br>        \left{\begin{array}{c}</p>
-<pre><code>        \frac&#123;\partial C&#125;&#123;\partial t&#125;=D \frac&#123;\partial^&#123;2&#125; C&#125;&#123;\partial x^&#123;2&#125;&#125; ;(0&lt;x&lt;1, t&gt;0) 
-        \\
-        \frac&#123;\partial C&#125;&#123;\partial x&#125;(0, t)=\pi e^&#123;-\pi^&#123;2&#125; t&#125; \cos (\pi x) 
-        \\ 
-        C(l, t)=0 ;(0 \leq x \leq 1) 
-        \\
-        C(x, 0)=\sin (\pi x) ;(t \geq 0)
-    \end&#123;array&#125;\right.
-</code></pre>
-<p>$$</p>
-]]></content>
-      <tags>
-        <tag>pinn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>mainpage</title>
-    <url>/2022/03/18/mainpage/</url>
-    <content><![CDATA[<p>记录一些常见的latex公式，方便书写</p>
-<span id="more"></span>
-
-<h3 id="1-数学公式"><a href="#1-数学公式" class="headerlink" title="1.数学公式"></a>1.数学公式</h3><table>
-<thead>
-<tr>
-<th>符号</th>
-<th>公式</th>
-<th></th>
-<th>符号</th>
-<th>公式</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>\int</td>
-<td>$\int$</td>
-<td></td>
-<td>a_1</td>
-<td>$a_1$</td>
-</tr>
-<tr>
-<td>\iint</td>
-<td>$\iint$</td>
-<td></td>
-<td>a^2</td>
-<td>$a^2$</td>
-</tr>
-<tr>
-<td>\iiint</td>
-<td>$\iiint$</td>
-<td></td>
-<td>\bar{x}</td>
-<td>$\bar{x}$</td>
-</tr>
-<tr>
-<td>\lim</td>
-<td>$\lim_{n =1}$</td>
-<td></td>
-<td>\vec{x}</td>
-<td>$\vec{x}$</td>
-</tr>
-<tr>
-<td>\lim\limits_{n = 1}</td>
-<td>$\lim\limits_{n=1}$</td>
-<td></td>
-<td>\dots</td>
-<td>$x_1,x_2,\dots,x_n$</td>
-</tr>
-<tr>
-<td>\sum</td>
-<td>$\sum$</td>
-<td></td>
-<td>\cdots</td>
-<td>$x_1,x_2,\cdots,x_n$</td>
-</tr>
-<tr>
-<td>\prod</td>
-<td>$\prod$</td>
-<td></td>
-<td>\ddots</td>
-<td>$x_1,x_2,\ddots,x_n$</td>
-</tr>
-<tr>
-<td>\sum\limits_{n = 1}^{\infty}</td>
-<td>$\sum\limits_{n = 1}^{\infty}$</td>
-<td></td>
-<td>\vdots</td>
-<td>$x_1,x_2,\vdots,x_n$</td>
-</tr>
-<tr>
-<td>\dfrac{f(x)}{g(x)}</td>
-<td>$\dfrac{f(x)}{g(x)}$</td>
-<td></td>
-<td>矩阵</td>
-<td>$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
-</tr>
-<tr>
-<td>\tfrac{f(x)}{g(x)}(默认)</td>
-<td>$\tfrac{f(x)}{g(x)}$</td>
-<td></td>
-<td>矩阵</td>
-<td>$\begin{pmatrix} a &amp; b\ c &amp; d \ \end{pmatrix} \quad  \quad \begin{Bmatrix} a &amp; b \ c &amp; d\ \end{Bmatrix}\quad \begin{vmatrix} a &amp; b \ c &amp; d \ \end{vmatrix}\quad \begin{Vmatrix} a &amp; b\ c &amp; d \ \end{Vmatrix}$</td>
-</tr>
-<tr>
-<td>\boxed{a}</td>
-<td>$\boxed{a}$</td>
-<td></td>
-<td>\quad</td>
-<td>$a\quad b$</td>
-</tr>
-<tr>
-<td>\sqrt[n]{x}</td>
-<td>$\sqrt[n]{x}$</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>split对齐</th>
-<th align="right">$\begin{split}f(x)=&amp;ax^2+bx+c\&amp;dy^2+fy+e\end{split}$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>case</td>
-<td align="right">$\begin{cases}f(x)=ax^2+bx+c\g(x)=dy^2+fy+e\end{cases}$</td>
-</tr>
-<tr>
-<td>align对齐</td>
-<td align="right">$\begin{align}f(x)=&amp;ax^2+bx+c\g(x)=&amp;dy^2+fy+e\end{align}$</td>
-</tr>
-<tr>
-<td>array</td>
-<td align="right">$\begin{array}{12}x_1&amp;x_2&amp;\dots\x_3&amp;x_4&amp;\dots\\vdots&amp;\vdots&amp;\ddots\end{array}$</td>
-</tr>
-</tbody></table>
-<p><img src="/2022/03/18/mainpage/QQ%E6%88%AA%E5%9B%BE20200304195537.png"></p>
-]]></content>
-      <tags>
-        <tag>main</tag>
-      </tags>
   </entry>
 </search>
