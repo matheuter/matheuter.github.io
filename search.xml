@@ -12,9 +12,9 @@
   <entry>
     <title>reflection</title>
     <url>/2023/03/29/reflection/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<h1 id="Metaclasses-and-Reflection-in-C"><a href="#Metaclasses-and-Reflection-in-C" class="headerlink" title="Metaclasses and Reflection in C++"></a>Metaclasses and Reflection in C++</h1><span id="more"></span>
 
-<h1 id="Metaclasses-and-Reflection-in-C"><a href="#Metaclasses-and-Reflection-in-C" class="headerlink" title="Metaclasses and Reflection in C++"></a>Metaclasses and Reflection in C++</h1><p>© Copyright 2000, Detlef Vollmann</p>
+<p>© Copyright 2000, Detlef Vollmann</p>
 <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Over the last two years I’ve held several tutorials on meta-classes and reflection in C++. I use the term reflection here in its original sense, “looking back to oneself”, nowadays sometimes called introspection. The more general process to allow modifications at class level at run-time is the old task to provide a meta-level, but is today sometimes (mis-)called “behavioural reflection” or “structural reflection”.</p>
 <p>In some sense this article presents work in progress, though it’s going on now for nearly ten years. It’s not the definitive meta-object protocol for C++, but more a presentation of lesser-known C++ techniques to solve some specific design problems.</p>
 <p>If you have comments on these techniques, or proposals how the problems could be solved completely differently, or if you find errors in this article, I really appreciate your feedback to <a href="mailto:dv@vollmann.ch">dv@vollmann.ch</a>.</p>
