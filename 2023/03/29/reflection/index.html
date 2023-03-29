@@ -22,26 +22,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.likepanda.cn","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":10,"offset":5},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="python c++ qt">
-<meta property="og:type" content="website">
-<meta property="og:title" content="rivia site">
-<meta property="og:url" content="http://www.likepanda.cn/index.html">
+    <meta name="description" content="Metaclasses and Reflection in C++© Copyright 2000, Detlef Vollmann PrefaceOver the last two years I’ve held several tutorials on meta-classes and reflection in C++. I use the term reflection here in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reflection">
+<meta property="og:url" content="http://www.likepanda.cn/2023/03/29/reflection/index.html">
 <meta property="og:site_name" content="rivia site">
-<meta property="og:description" content="python c++ qt">
+<meta property="og:description" content="Metaclasses and Reflection in C++© Copyright 2000, Detlef Vollmann PrefaceOver the last two years I’ve held several tutorials on meta-classes and reflection in C++. I use the term reflection here in">
 <meta property="og:locale" content="zh_CH">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig1.jpg">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig2.jpg">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig3.jpg">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig4.jpg">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig5.jpg">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig6.jpg">
+<meta property="og:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig7.jpg">
+<meta property="article:published_time" content="2023-03-29T11:54:05.000Z">
+<meta property="article:modified_time" content="2023-03-29T11:58:06.677Z">
 <meta property="article:author" content="Jok Brown">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.likepanda.cn/2023/03/29/reflection/fig1.jpg">
 
 
-<link rel="canonical" href="http://www.likepanda.cn/">
+<link rel="canonical" href="http://www.likepanda.cn/2023/03/29/reflection/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CH","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CH","comments":true,"permalink":"http://www.likepanda.cn/2023/03/29/reflection/","path":"2023/03/29/reflection/","title":"reflection"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>rivia site</title>
+<title>reflection | rivia site</title>
   
 
 
@@ -71,7 +81,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">rivia site</h1>
+      <p class="site-title">rivia site</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">deep thinking</p>
@@ -136,7 +146,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -149,6 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Metaclasses-and-Reflection-in-C"><span class="nav-number">1.</span> <span class="nav-text">Metaclasses and Reflection in C++</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preface"><span class="nav-number">1.1.</span> <span class="nav-text">Preface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.2.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#A-simple-story"><span class="nav-number">1.3.</span> <span class="nav-text">A simple story</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Meta-Classes-for-C"><span class="nav-number">1.4.</span> <span class="nav-text">Meta Classes for C++</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MOP-Overview"><span class="nav-number">1.4.1.</span> <span class="nav-text">MOP Overview</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Type"><span class="nav-number">1.4.2.</span> <span class="nav-text">Type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attribute"><span class="nav-number">1.4.3.</span> <span class="nav-text">Attribute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Classes"><span class="nav-number">1.4.4.</span> <span class="nav-text">Classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Values"><span class="nav-number">1.4.5.</span> <span class="nav-text">Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RealValue"><span class="nav-number">1.4.6.</span> <span class="nav-text">RealValue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Value-handle"><span class="nav-number">1.4.7.</span> <span class="nav-text">Value handle</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-number">1.4.8.</span> <span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Setting-the-values-for-the-objects"><span class="nav-number">1.4.8.1.</span> <span class="nav-text">Setting the values for the objects:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Getting-the-values"><span class="nav-number">1.4.8.2.</span> <span class="nav-text">Getting the values:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reflection-for-existing-C-classes"><span class="nav-number">1.5.</span> <span class="nav-text">Reflection for existing C++ classes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pointer-to-member"><span class="nav-number">1.5.1.</span> <span class="nav-text">Pointer to member</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pointer-to-member-Types"><span class="nav-number">1.5.2.</span> <span class="nav-text">pointer-to-member Types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-classes"><span class="nav-number">1.5.3.</span> <span class="nav-text">C++ classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-objects"><span class="nav-number">1.5.4.</span> <span class="nav-text">C++ objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Usage"><span class="nav-number">1.5.5.</span> <span class="nav-text">Usage</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Interface"><span class="nav-number">1.5.6.</span> <span class="nav-text">C++ Interface</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Applications"><span class="nav-number">1.6.</span> <span class="nav-text">Applications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-final-remarks"><span class="nav-number">1.7.</span> <span class="nav-text">Two final remarks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Coming-articles"><span class="nav-number">1.8.</span> <span class="nav-text">Coming articles</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References"><span class="nav-number">1.9.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Notes"><span class="nav-number">1.10.</span> <span class="nav-text">Notes</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -196,95 +207,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.likepanda.cn/2022/03/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jok Brown">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rivia site">
-      <meta itemprop="description" content="python c++ qt">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | rivia site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-            <i class="fa fa-thumb-tack"></i>
-            <font color="RED">置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-03-18 14:57:59 / 修改时间：18:29:43" itemprop="dateCreated datePublished" datetime="2022-03-18T14:57:59+08:00">2022-03-18</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>this is my frist program  </p>
-<h2 id="Welcome-！"><a href="#Welcome-！" class="headerlink" title="Welcome ！"></a>Welcome ！</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;Hello World!&quot;</span>)</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CH">
     <link itemprop="mainEntityOfPage" href="http://www.likepanda.cn/2023/03/29/reflection/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -298,13 +231,13 @@
     </span>
     
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | rivia site">
+      <meta itemprop="name" content="reflection | rivia site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/29/reflection/" class="post-title-link" itemprop="url">reflection</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          reflection
+        </h1>
 
         <div class="post-meta-container">
           
@@ -320,6 +253,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
 </div>
 
         </div>
@@ -330,7 +270,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <span id="more"></span>
+        <span id="more"></span>
 
 <h1 id="Metaclasses-and-Reflection-in-C"><a href="#Metaclasses-and-Reflection-in-C" class="headerlink" title="Metaclasses and Reflection in C++"></a>Metaclasses and Reflection in C++</h1><p>© Copyright 2000, Detlef Vollmann</p>
 <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Over the last two years I’ve held several tutorials on meta-classes and reflection in C++. I use the term reflection here in its original sense, “looking back to oneself”, nowadays sometimes called introspection. The more general process to allow modifications at class level at run-time is the old task to provide a meta-level, but is today sometimes (mis-)called “behavioural reflection” or “structural reflection”.</p>
@@ -510,7 +450,6 @@
 <p>[<a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#bkverweis5">5</a>] Michael S. Ball, Stephen D. Clamage: “Pointers-to-Members”, C++ Report 11(10):8-12, Nov/Dec 1999</p>
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><p><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis1">1</a> I will not elaborate on differences between type and class.<br><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis2">2</a> The idea of the search machine is to have a batch process that queries all objects about its attribute values and create an own internal index from that information.<br><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis3">3</a> actually, a simple array would suffice, as its size is fix and known at compile time. But for future extensions a vector is more flexible.<br><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis4">4</a> As <code>class</code> is a reserved word in C++, and I don’t like identifiers to differ only in case from others I have chosen <code>ClassDef</code> here.<br><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis5">5</a> <code>fromString()</code> would also be useful, but we omit it here.<br><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis6">6</a> In fact, a pointer-to-member is not as easy as an offset. Especially if multiple inheritance comes in, things become more complicated.<br><a target="_blank" rel="noopener" href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis7">7</a> It might be necessary to adjust that offset, but the compiler cares for that.</p>
 
-      
     </div>
 
     
@@ -518,8 +457,35 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Jok Brown
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://www.likepanda.cn/2023/03/29/reflection/" title="reflection">http://www.likepanda.cn/2023/03/29/reflection/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/03/15/datastructure/" rel="next" title="datastructure">
+                  datastructure <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
@@ -527,219 +493,7 @@
 
 
 
-    
 
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.likepanda.cn/2023/03/15/datastructure/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jok Brown">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rivia site">
-      <meta itemprop="description" content="python c++ qt">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | rivia site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/15/datastructure/" class="post-title-link" itemprop="url">datastructure</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-03-15 22:05:01" itemprop="dateCreated datePublished" datetime="2023-03-15T22:05:01+08:00">2023-03-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.likepanda.cn/2023/03/15/opsratingsystem/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jok Brown">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rivia site">
-      <meta itemprop="description" content="python c++ qt">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | rivia site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/15/opsratingsystem/" class="post-title-link" itemprop="url">opsratingsystem</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-03-15 22:04:48" itemprop="dateCreated datePublished" datetime="2023-03-15T22:04:48+08:00">2023-03-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://www.likepanda.cn/2023/03/15/network/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jok Brown">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="rivia site">
-      <meta itemprop="description" content="python c++ qt">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | rivia site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/15/network/" class="post-title-link" itemprop="url">network</a>
-        </h2>
-
-        <div class="post-meta-container">
-          
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-03-15 22:04:33" itemprop="dateCreated datePublished" datetime="2023-03-15T22:04:33+08:00">2023-03-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 </div>
   </main>
