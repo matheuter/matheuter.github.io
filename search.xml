@@ -193,4 +193,9 @@
 <h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2><p><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis1">1</a> I will not elaborate on differences between type and class.<br><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis2">2</a> The idea of the search machine is to have a batch process that queries all objects about its attribute values and create an own internal index from that information.<br><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis3">3</a> actually, a simple array would suffice, as its size is fix and known at compile time. But for future extensions a vector is more flexible.<br><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis4">4</a> As <code>class</code> is a reserved word in C++, and I don’t like identifiers to differ only in case from others I have chosen <code>ClassDef</code> here.<br><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis5">5</a> <code>fromString()</code> would also be useful, but we omit it here.<br><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis6">6</a> In fact, a pointer-to-member is not as easy as an offset. Especially if multiple inheritance comes in, things become more complicated.<br><a href="http://www.vollmann.com/en/pubs/meta/meta/meta.html#fnverweis7">7</a> It might be necessary to adjust that offset, but the compiler cares for that.</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>cpluscplus17-1</title>
+    <url>/2023/07/24/cpluscplus17-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
 </search>
